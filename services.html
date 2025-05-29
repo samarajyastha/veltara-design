@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Veltara Consultants - Your Gateway to World-Class Education Abroad
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#36705f",
+              secondary: "#286291",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .hero-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .country-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .testimonial-card {
+        transition: all 0.3s ease;
+      }
+
+      .testimonial-card:hover {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <a href="index.html" class="text-2xl font-bold text-primary">
+          <span class="text-secondary">Veltara</span> Consultants
+        </a>
+        <div class="hidden md:flex space-x-8">
+          <a
+            href="index.html"
+            class="text-gray-700 hover:text-primary font-medium"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-gray-700 hover:text-primary font-medium"
+            >About Us</a
+          >
+          <a
+            href="services.html"
+            class="text-gray-700 hover:text-primary font-medium"
+            >Services</a
+          >
+          <a
+            href="destinations.html"
+            class="text-gray-700 hover:text-primary font-medium"
+            >Study Destinations</a
+          >
+          <a
+            href="universities.html"
+            class="text-gray-700 hover:text-primary font-medium"
+            >Universities</a
+          >
+          <a
+            href="testimonials.html"
+            class="text-gray-700 hover:text-primary font-medium"
+            >Success Stories</a
+          >
+          <a
+            href="contact.html"
+            class="text-gray-700 hover:text-primary font-medium"
+            >Contact</a
+          >
+        </div>
+        <button class="md:hidden text-gray-700" id="mobile-menu-button">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        class="md:hidden hidden bg-white w-full py-2 px-4 shadow-lg"
+        id="mobile-menu"
+      >
+        <a href="index.html" class="block py-2 text-gray-700 hover:text-primary"
+          >Home</a
+        >
+        <a href="about.html" class="block py-2 text-gray-700 hover:text-primary"
+          >About Us</a
+        >
+        <a
+          href="services.html"
+          class="block py-2 text-gray-700 hover:text-primary"
+          >Services</a
+        >
+        <a
+          href="destinations.html"
+          class="block py-2 text-gray-700 hover:text-primary"
+          >Study Destinations</a
+        >
+        <a
+          href="universities.html"
+          class="block py-2 text-gray-700 hover:text-primary"
+          >Universities</a
+        >
+        <a
+          href="testimonials.html"
+          class="block py-2 text-gray-700 hover:text-primary"
+          >Success Stories</a
+        >
+        <a
+          href="contact.html"
+          class="block py-2 text-gray-700 hover:text-primary"
+          >Contact</a
+        >
+      </div>
+    </nav>
+
+    <!-- Replace the <section> content in the main template with this for the Services page -->
+
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">
+            Our Comprehensive Services
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            End-to-end support for your study abroad journey, from initial
+            consultation to post-arrival assistance.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+          <!-- Free Consultation -->
+          <div
+            class="bg-gray-50 p-8 rounded-lg flex flex-col md:flex-row gap-6"
+          >
+            <div class="text-primary text-5xl mb-4 md:mb-0">
+              <i class="fas fa-comments"></i>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-gray-800 mb-3">
+                Free Initial Consultation
+              </h2>
+              <p class="text-gray-600 mb-4">
+                Begin your journey with a no-obligation session where we assess
+                your profile, discuss options, and chart a personalized roadmap.
+              </p>
+              <ul class="text-gray-600 space-y-2 mb-4">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Profile evaluation</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Country and program recommendations</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Timeline planning</span>
+                </li>
+              </ul>
+              <a
+                href="contact.html"
+                class="inline-block bg-primary hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300"
+                >Book Now</a
+              >
+            </div>
+          </div>
+
+          <!-- University Selection -->
+          <div
+            class="bg-gray-50 p-8 rounded-lg flex flex-col md:flex-row gap-6"
+          >
+            <div class="text-primary text-5xl mb-4 md:mb-0">
+              <i class="fas fa-search"></i>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-gray-800 mb-3">
+                University Selection Guidance
+              </h2>
+              <p class="text-gray-600 mb-4">
+                We help you identify the best universities that match your
+                academic background, career goals, and personal preferences.
+              </p>
+              <ul class="text-gray-600 space-y-2 mb-4">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Comprehensive university shortlisting</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Admission requirements analysis</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Safety, target, and reach university strategy</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Application Assistance -->
+          <div
+            class="bg-gray-50 p-8 rounded-lg flex flex-col md:flex-row gap-6"
+          >
+            <div class="text-primary text-5xl mb-4 md:mb-0">
+              <i class="fas fa-edit"></i>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-gray-800 mb-3">
+                Application Assistance
+              </h2>
+              <p class="text-gray-600 mb-4">
+                Complete support with the entire application process to maximize
+                your chances of admission.
+              </p>
+              <ul class="text-gray-600 space-y-2 mb-4">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Application form completion</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Document checklist and preparation</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Deadline management</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>LOR request guidance</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- SOP & Essay Review -->
+          <div
+            class="bg-gray-50 p-8 rounded-lg flex flex-col md:flex-row gap-6"
+          >
+            <div class="text-primary text-5xl mb-4 md:mb-0">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-gray-800 mb-3">
+                SOP & Essay Review
+              </h2>
+              <p class="text-gray-600 mb-4">
+                Our experts help craft compelling personal statements that
+                highlight your unique strengths and aspirations.
+              </p>
+              <ul class="text-gray-600 space-y-2 mb-4">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Brainstorming session</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Structure and content guidance</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Multiple rounds of editing</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Plagiarism check</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Visa Counseling -->
+          <div
+            class="bg-gray-50 p-8 rounded-lg flex flex-col md:flex-row gap-6"
+          >
+            <div class="text-primary text-5xl mb-4 md:mb-0">
+              <i class="fas fa-passport"></i>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-gray-800 mb-3">
+                Visa Counseling
+              </h2>
+              <p class="text-gray-600 mb-4">
+                Navigate the complex visa process with our step-by-step guidance
+                and mock interviews.
+              </p>
+              <ul class="text-gray-600 space-y-2 mb-4">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Document preparation</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Financial documentation guidance</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Mock visa interviews</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Application submission support</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Test Preparation -->
+          <div
+            class="bg-gray-50 p-8 rounded-lg flex flex-col md:flex-row gap-6"
+          >
+            <div class="text-primary text-5xl mb-4 md:mb-0">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-gray-800 mb-3">
+                Test Preparation
+              </h2>
+              <p class="text-gray-600 mb-4">
+                Resources and coaching for all required standardized tests to
+                help you achieve your target scores.
+              </p>
+              <ul class="text-gray-600 space-y-2 mb-4">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>IELTS/TOEFL coaching</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>GRE/GMAT strategy sessions</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Practice tests and feedback</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Score improvement plans</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Pre-Departure Orientation -->
+          <div
+            class="bg-gray-50 p-8 rounded-lg flex flex-col md:flex-row gap-6"
+          >
+            <div class="text-primary text-5xl mb-4 md:mb-0">
+              <i class="fas fa-plane-departure"></i>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-gray-800 mb-3">
+                Pre-Departure Orientation
+              </h2>
+              <p class="text-gray-600 mb-4">
+                Prepare for your new life abroad with our comprehensive
+                orientation sessions covering all essential aspects.
+              </p>
+              <ul class="text-gray-600 space-y-2 mb-4">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Cultural adaptation</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Banking and accommodation setup</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Health insurance guidance</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Alumni networking</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Scholarship Assistance -->
+          <div
+            class="bg-gray-50 p-8 rounded-lg flex flex-col md:flex-row gap-6"
+          >
+            <div class="text-primary text-5xl mb-4 md:mb-0">
+              <i class="fas fa-award"></i>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-gray-800 mb-3">
+                Scholarship Assistance
+              </h2>
+              <p class="text-gray-600 mb-4">
+                Maximize your chances of securing financial aid with our
+                targeted scholarship search and application support.
+              </p>
+              <ul class="text-gray-600 space-y-2 mb-4">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Scholarship identification</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Application strategy</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Essay refinement</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                  <span>Submission support</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-primary text-white p-8 rounded-lg text-center">
+          <h2 class="text-3xl font-bold mb-6">Ready to Begin Your Journey?</h2>
+          <p class="text-xl mb-8 max-w-2xl mx-auto">
+            Book your free consultation today and take the first step toward
+            your international education dreams.
+          </p>
+          <a
+            href="contact.html"
+            class="inline-block bg-white hover:bg-gray-100 text-primary font-bold py-3 px-8 rounded-lg transition duration-300"
+            >Get Started</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-primary">
+              Veltara Consultants
+            </h3>
+            <p class="text-gray-400">
+              Your trusted partner in achieving international education goals
+              with personalized guidance and expert support.
+            </p>
+            <div class="flex mt-4 space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="index.html" class="text-gray-400 hover:text-white"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="text-gray-400 hover:text-white"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="services.html" class="text-gray-400 hover:text-white"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="destinations.html"
+                  class="text-gray-400 hover:text-white"
+                  >Study Destinations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="testimonials.html"
+                  class="text-gray-400 hover:text-white"
+                  >Success Stories</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
+                <span>Central Plaza, Itahari-06, Sunsari</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone-alt mr-3 text-primary"></i>
+                <span>9852039698</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope mr-3 text-primary"></i>
+                <span>veltaraconsultants@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Office Hours</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li class="flex justify-between">
+                <span>Monday - Friday</span>
+                <span>9:00 AM - 6:00 PM</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Saturday</span>
+                <span>10:00 AM - 4:00 PM</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Sunday</span>
+                <span>Closed</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm">
+            © 2023 Veltara Consultants. All rights reserved.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a
+              href="privacy.html"
+              class="text-gray-400 hover:text-white text-sm"
+              >Privacy Policy</a
+            >
+            <a href="terms.html" class="text-gray-400 hover:text-white text-sm"
+              >Terms of Service</a
+            >
+            <a href="faq.html" class="text-gray-400 hover:text-white text-sm"
+              >FAQs</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a
+      href="https://wa.me/1234567890"
+      class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition duration-300 z-40"
+    >
+      <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
+        });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

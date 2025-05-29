@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GlobalEd Consultancy | Study Abroad Experts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#36705f",
+              secondary: "#286291",
+              accent: "#f3f4f6",
+              light: "#f8fafc",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .page {
+        display: none;
+        animation: fadeIn 0.5s ease-in-out;
+      }
+      .active-page {
+        display: block;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .university-card,
+      .testimonial-card {
+        transition: all 0.3s ease;
+      }
+      .university-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .testimonial-card:hover {
+        transform: scale(1.02);
+      }
+      .destination-tab.active {
+        background: linear-gradient(to right, #36705f, #286291);
+        color: white;
+      }
+      .program-badge {
+        transition: all 0.2s ease;
+      }
+      .program-badge:hover {
+        background-color: #36705f;
+        color: white;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 font-sans">
+    <!-- Main Navigation -->
+    <div class="bg-white shadow-sm sticky top-0 z-50">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center">
+            <i class="fas fa-graduation-cap text-secondary text-3xl mr-2"></i>
+            <h1 class="text-2xl font-bold text-primary">
+              Global<span class="text-secondary">Ed</span>
+            </h1>
+          </div>
+
+          <nav class="flex space-x-2 md:space-x-6">
+            <button
+              data-page="universities"
+              class="page-nav px-3 py-2 rounded-lg hover:bg-accent text-gray-600 hover:text-primary transition flex items-center"
+            >
+              <i class="fas fa-university mr-2"></i>
+              <span>Universities</span>
+            </button>
+            <button
+              data-page="testimonials"
+              class="page-nav px-3 py-2 rounded-lg hover:bg-accent text-gray-600 hover:text-primary transition flex items-center"
+            >
+              <i class="fas fa-comments mr-2"></i>
+              <span>Success Stories</span>
+            </button>
+            <button
+              data-page="destinations"
+              class="page-nav px-3 py-2 rounded-lg hover:bg-accent text-gray-600 hover:text-primary transition flex items-center"
+            >
+              <i class="fas fa-globe-americas mr-2"></i>
+              <span>Destinations</span>
+            </button>
+          </nav>
+
+          <button
+            class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition hidden md:block"
+          >
+            <i class="fas fa-phone mr-2"></i>Contact Us
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page Content Container -->
+    <div class="container mx-auto px-4 py-8">
+      <!-- Universities Page -->
+      <div id="universities" class="page active-page">
+        <div class="text-center mb-12">
+          <h1 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+            Explore Top Universities
+          </h1>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Discover our partner universities across the globe that offer
+            exceptional education and opportunities.
+          </p>
+        </div>
+
+        <!-- Search and Filters -->
+        <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+          <div class="flex flex-col md:flex-row gap-4">
+            <div class="flex-1">
+              <div class="relative">
+                <input
+                  type="text"
+                  placeholder="Search universities, programs, locations..."
+                  class="w-full p-3 border border-gray-300 rounded-lg pl-12 focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+                <i
+                  class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"
+                ></i>
+              </div>
+            </div>
+            <div class="flex gap-2">
+              <select
+                class="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary"
+              >
+                <option>All Countries</option>
+                <option>USA</option>
+                <option>Canada</option>
+                <option>UK</option>
+                <option>Australia</option>
+              </select>
+              <select
+                class="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary"
+              >
+                <option>All Programs</option>
+                <option>Engineering</option>
+                <option>Business</option>
+                <option>Medicine</option>
+                <option>Computer Science</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- University Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div
+            class="university-card bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            <div
+              class="h-48 bg-gradient-to-r from-primary to-secondary relative"
+            >
+              <div
+                class="absolute top-4 right-4 bg-white text-primary px-3 py-1 rounded-full text-sm font-semibold"
+              >
+                Rank: #2
+              </div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <h3 class="text-xl font-bold">University of Cambridge</h3>
+                <p class="flex items-center mt-1">
+                  <i class="fas fa-map-marker-alt mr-2"></i> Cambridge, UK
+                </p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-600 mb-4">
+                One of the world's oldest universities and leading academic
+                centers, known for rigorous academic programs.
+              </p>
+              <div class="mb-4">
+                <div class="text-primary font-semibold mb-2">
+                  Popular Programs:
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="program-badge bg-accent text-primary px-3 py-1 rounded-full text-sm"
+                    >Engineering</span
+                  >
+                  <span
+                    class="program-badge bg-accent text-primary px-3 py-1 rounded-full text-sm"
+                    >Law</span
+                  >
+                  <span
+                    class="program-badge bg-accent text-primary px-3 py-1 rounded-full text-sm"
+                    >Sciences</span
+                  >
+                </div>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <div class="text-sm">
+                  <span class="font-semibold">Tuition:</span>
+                  <span class="text-gray-600">£25,000 - £38,000/yr</span>
+                </div>
+                <button
+                  class="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition flex items-center"
+                >
+                  Details <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="university-card bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            <div
+              class="h-48 bg-gradient-to-r from-secondary to-primary relative"
+            >
+              <div
+                class="absolute top-4 right-4 bg-white text-primary px-3 py-1 rounded-full text-sm font-semibold"
+              >
+                Rank: #1
+              </div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <h3 class="text-xl font-bold">Harvard University</h3>
+                <p class="flex items-center mt-1">
+                  <i class="fas fa-map-marker-alt mr-2"></i> Massachusetts, USA
+                </p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-600 mb-4">
+                Ivy League university renowned for excellence in teaching,
+                learning, and research across diverse fields.
+              </p>
+              <div class="mb-4">
+                <div class="text-primary font-semibold mb-2">
+                  Popular Programs:
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="program-badge bg-accent text-primary px-3 py-1 rounded-full text-sm"
+                    >Business</span
+                  >
+                  <span
+                    class="program-badge bg-accent text-primary px-3 py-1 rounded-full text-sm"
+                    >Medicine</span
+                  >
+                  <span
+                    class="program-badge bg-accent text-primary px-3 py-1 rounded-full text-sm"
+                    >Law</span
+                  >
+                </div>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <div class="text-sm">
+                  <span class="font-semibold">Tuition:</span>
+                  <span class="text-gray-600">$50,000 - $60,000/yr</span>
+                </div>
+                <button
+                  class="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition flex items-center"
+                >
+                  Details <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="university-card bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            <div
+              class="h-48 bg-gradient-to-r from-primary to-secondary relative"
+            >
+              <div
+                class="absolute top-4 right-4 bg-white text-primary px-3 py-1 rounded-full text-sm font-semibold"
+              >
+                Rank: #18
+              </div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <h3 class="text-xl font-bold">University of Toronto</h3>
+                <p class="flex items-center mt-1">
+                  <i class="fas fa-map-marker-alt mr-2"></i> Toronto, Canada
+                </p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-600 mb-4">
+                Canada's leading institution of learning, discovery and
+                knowledge creation with diverse programs.
+              </p>
+              <div class="mb-4">
+                <div class="text-primary font-semibold mb-2">
+                  Popular Programs:
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="program-badge bg-accent text-primary px-3 py-1 rounded-full text-sm"
+                    >Computer Science</span
+                  >
+                  <span
+                    class="program-badge bg-accent text-primary px-3 py-1 rounded-full text-sm"
+                    >Medicine</span
+                  >
+                  <span
+                    class="program-badge bg-accent text-primary px-3 py-1 rounded-full text-sm"
+                    >Engineering</span
+                  >
+                </div>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <div class="text-sm">
+                  <span class="font-semibold">Tuition:</span>
+                  <span class="text-gray-600">$30,000 - $45,000/yr</span>
+                </div>
+                <button
+                  class="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition flex items-center"
+                >
+                  Details <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="university-card bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            <div
+              class="h-48 bg-gradient-to-r from-secondary to-primary relative"
+            >
+              <div
+                class="absolute top-4 right-4 bg-white text-primary px-3 py-1 rounded-full text-sm font-semibold"
+              >
+                Rank: #34
+              </div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <h3 class="text-xl font-bold">University of Melbourne</h3>
+                <p class="flex items-center mt-1">
+                  <i class="fas fa-map-marker-alt mr-2"></i> Melbourne,
+                  Australia
+                </p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-600 mb-4">
+                Australia's leading university with outstanding reputation for
+                teaching and research across various disciplines.
+              </p>
+              <div class="mb-4">
+                <div class="text-primary font-semibold mb-2">
+                  Popular Programs:
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="program-badge bg-accent text-primary px-3 py-1 rounded-full text-sm"
+                    >Arts & Humanities</span
+                  >
+                  <span
+                    class="program-badge bg-accent text-primary px-3 py-1 rounded-full text-sm"
+                    >Engineering</span
+                  >
+                  <span
+                    class="program-badge bg-accent text-primary px-3 py-1 rounded-full text-sm"
+                    >Biomedicine</span
+                  >
+                </div>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <div class="text-sm">
+                  <span class="font-semibold">Tuition:</span>
+                  <span class="text-gray-600">A$30,000 - A$45,000/yr</span>
+                </div>
+                <button
+                  class="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition flex items-center"
+                >
+                  Details <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div
+            class="university-card bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            <div
+              class="h-48 bg-gradient-to-r from-primary to-secondary relative"
+            >
+              <div
+                class="absolute top-4 right-4 bg-white text-primary px-3 py-1 rounded-full text-sm font-semibold"
+              >
+                Rank: #45
+              </div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <h3 class="text-xl font-bold">ETH Zurich</h3>
+                <p class="flex items-center mt-1">
+                  <i class="fas fa-map-marker-alt mr-2"></i> Zurich, Switzerland
+                </p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-600 mb-4">
+                World-leading university in science and technology with a strong
+                focus on research and innovation.
+              </p>
+              <div class="mb-4">
+                <div class="text-primary font-semibold mb-2">
+                  Popular Programs:
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="program-badge bg-accent text-primary px-3 py-1 rounded-full text-sm"
+                    >Engineering</span
+                  >
+                  <span
+                    class="program-badge bg-accent text-primary px-3 py-1 rounded-full text-sm"
+                    >Physics</span
+                  >
+                  <span
+                    class="program-badge bg-accent text-primary px-3 py-1 rounded-full text-sm"
+                    >Computer Science</span
+                  >
+                </div>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <div class="text-sm">
+                  <span class="font-semibold">Tuition:</span>
+                  <span class="text-gray-600">CHF 1,300 - CHF 1,800/yr</span>
+                </div>
+                <button
+                  class="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition flex items-center"
+                >
+                  Details <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div
+            class="university-card bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            <div
+              class="h-48 bg-gradient-to-r from-secondary to-primary relative"
+            >
+              <div
+                class="absolute top-4 right-4 bg-white text-primary px-3 py-1 rounded-full text-sm font-semibold"
+              >
+                Rank: #23
+              </div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <h3 class="text-xl font-bold">University of Tokyo</h3>
+                <p class="flex items-center mt-1">
+                  <i class="fas fa-map-marker-alt mr-2"></i> Tokyo, Japan
+                </p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-600 mb-4">
+                Japan's premier research university with global reputation for
+                excellence in science and technology.
+              </p>
+              <div class="mb-4">
+                <div class="text-primary font-semibold mb-2">
+                  Popular Programs:
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="program-badge bg-accent text-primary px-3 py-1 rounded-full text-sm"
+                    >Engineering</span
+                  >
+                  <span
+                    class="program-badge bg-accent text-primary px-3 py-1 rounded-full text-sm"
+                    >Robotics</span
+                  >
+                  <span
+                    class="program-badge bg-accent text-primary px-3 py-1 rounded-full text-sm"
+                    >Economics</span
+                  >
+                </div>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <div class="text-sm">
+                  <span class="font-semibold">Tuition:</span>
+                  <span class="text-gray-600">¥535,800 - ¥804,000/yr</span>
+                </div>
+                <button
+                  class="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition flex items-center"
+                >
+                  Details <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <button
+            class="px-6 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition"
+          >
+            View All 120+ Universities
+          </button>
+        </div>
+      </div>
+
+      <!-- Testimonials Page -->
+      <div id="testimonials" class="page">
+        <div class="text-center mb-12">
+          <h1 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+            Student Success Stories
+          </h1>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Hear from students who achieved their study abroad dreams with our
+            guidance.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-16 h-16 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white font-bold text-xl"
+              >
+                AS
+              </div>
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-800">Aisha Sharma</h4>
+                <p class="text-secondary">MIT, Computer Science</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4 italic">
+              "GlobalEd helped me navigate the complex application process for
+              MIT. Their expertise in preparing standout applications was
+              invaluable. I received acceptance with a full scholarship!"
+            </p>
+            <div class="flex text-yellow-400 mb-4">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="text-sm text-gray-500">
+              <i class="far fa-clock mr-2"></i>Admitted: Fall 2023
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-16 h-16 rounded-full bg-gradient-to-r from-secondary to-primary flex items-center justify-center text-white font-bold text-xl"
+              >
+                RM
+              </div>
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-800">Raj Mehta</h4>
+                <p class="text-secondary">University of Toronto, MBA</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4 italic">
+              "The team's personalized approach made all the difference. From
+              selecting the right schools to interview preparation, their
+              support was exceptional. I'm now pursuing my MBA at Rotman."
+            </p>
+            <div class="flex text-yellow-400 mb-4">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="text-sm text-gray-500">
+              <i class="far fa-clock mr-2"></i>Admitted: Winter 2023
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-16 h-16 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white font-bold text-xl"
+              >
+                PK
+              </div>
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-800">Priya Kumar</h4>
+                <p class="text-secondary">King's College London, Medicine</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4 italic">
+              "As a medical aspirant, the application process seemed
+              overwhelming. GlobalEd guided me through every step, helping me
+              secure a place at one of the UK's top medical schools."
+            </p>
+            <div class="flex text-yellow-400 mb-4">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="text-sm text-gray-500">
+              <i class="far fa-clock mr-2"></i>Admitted: Fall 2022
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-16 h-16 rounded-full bg-gradient-to-r from-secondary to-primary flex items-center justify-center text-white font-bold text-xl"
+              >
+                SK
+              </div>
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-800">Sanjay Kumar</h4>
+                <p class="text-secondary">
+                  Stanford University, MS Computer Science
+                </p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4 italic">
+              "GlobalEd's mentorship helped me transform my profile into
+              something Stanford couldn't ignore. Their guidance on research
+              papers and SOP was game-changing for my application."
+            </p>
+            <div class="flex text-yellow-400 mb-4">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="text-sm text-gray-500">
+              <i class="far fa-clock mr-2"></i>Admitted: Fall 2023
+            </div>
+          </div>
+
+          <!-- Testimonial 5 -->
+          <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-16 h-16 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white font-bold text-xl"
+              >
+                NP
+              </div>
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-800">Neha Patel</h4>
+                <p class="text-secondary">University of Sydney, MBA</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4 italic">
+              "Moving to Australia for my MBA was a big decision. GlobalEd made
+              the entire process seamless - from university selection to visa
+              processing. I'm loving my Sydney experience!"
+            </p>
+            <div class="flex text-yellow-400 mb-4">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="text-sm text-gray-500">
+              <i class="far fa-clock mr-2"></i>Admitted: Spring 2023
+            </div>
+          </div>
+
+          <!-- Testimonial 6 -->
+          <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-16 h-16 rounded-full bg-gradient-to-r from-secondary to-primary flex items-center justify-center text-white font-bold text-xl"
+              >
+                AM
+              </div>
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-800">Amit Mehta</h4>
+                <p class="text-secondary">ETH Zurich, Robotics Engineering</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4 italic">
+              "GlobalEd helped me secure admission to my dream robotics program
+              in Switzerland. Their expertise in European applications and
+              scholarship guidance was outstanding."
+            </p>
+            <div class="flex text-yellow-400 mb-4">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="text-sm text-gray-500">
+              <i class="far fa-clock mr-2"></i>Admitted: Fall 2022
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div class="bg-white p-6 rounded-xl shadow-lg">
+            <div class="text-4xl font-bold text-primary">2500+</div>
+            <div class="text-gray-600">Students Guided</div>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-lg">
+            <div class="text-4xl font-bold text-secondary">98%</div>
+            <div class="text-gray-600">Acceptance Rate</div>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-lg">
+            <div class="text-4xl font-bold text-primary">50+</div>
+            <div class="text-gray-600">Countries Covered</div>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-lg">
+            <div class="text-4xl font-bold text-secondary">$15M+</div>
+            <div class="text-gray-600">Scholarships Secured</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Destinations Page -->
+      <div id="destinations" class="page">
+        <div class="text-center mb-12">
+          <h1 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+            Study Destination Details
+          </h1>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Explore popular study destinations with comprehensive information to
+            help you make an informed decision.
+          </p>
+        </div>
+
+        <!-- Destination Tabs -->
+        <div class="flex flex-wrap justify-center gap-2 mb-8">
+          <button
+            class="destination-tab px-5 py-3 bg-white text-gray-600 border border-gray-300 rounded-lg hover:bg-primary hover:text-white transition active"
+          >
+            Canada
+          </button>
+          <button
+            class="destination-tab px-5 py-3 bg-white text-gray-600 border border-gray-300 rounded-lg hover:bg-primary hover:text-white transition"
+          >
+            United States
+          </button>
+          <button
+            class="destination-tab px-5 py-3 bg-white text-gray-600 border border-gray-300 rounded-lg hover:bg-primary hover:text-white transition"
+          >
+            United Kingdom
+          </button>
+          <button
+            class="destination-tab px-5 py-3 bg-white text-gray-600 border border-gray-300 rounded-lg hover:bg-primary hover:text-white transition"
+          >
+            Australia
+          </button>
+          <button
+            class="destination-tab px-5 py-3 bg-white text-gray-600 border border-gray-300 rounded-lg hover:bg-primary hover:text-white transition"
+          >
+            Germany
+          </button>
+        </div>
+
+        <!-- Destination Details -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="md:flex">
+            <div
+              class="md:w-2/5 bg-gradient-to-b from-primary to-secondary p-8 text-white"
+            >
+              <h3 class="text-2xl font-bold mb-4">Study in Canada</h3>
+              <div class="mb-6">
+                <h4 class="text-lg font-semibold mb-2">Why Canada?</h4>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mt-1 mr-2"></i>
+                    <span>World-class education system</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mt-1 mr-2"></i>
+                    <span>Multicultural and welcoming society</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mt-1 mr-2"></i>
+                    <span>Post-study work opportunities</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mt-1 mr-2"></i>
+                    <span>Safe and high quality of life</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mt-1 mr-2"></i>
+                    <span>Pathway to permanent residency</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="text-lg font-semibold mb-2">Quick Facts</h4>
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <div class="text-sm">Avg. Tuition</div>
+                    <div class="font-bold">$15,000 - $35,000</div>
+                  </div>
+                  <div>
+                    <div class="text-sm">Living Costs</div>
+                    <div class="font-bold">$10,000 - $15,000/yr</div>
+                  </div>
+                  <div>
+                    <div class="text-sm">Work Permit</div>
+                    <div class="font-bold">Up to 3 years</div>
+                  </div>
+                  <div>
+                    <div class="text-sm">Top Universities</div>
+                    <div class="font-bold">UofT, UBC, McGill</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="md:w-3/5 p-8">
+              <div class="mb-8">
+                <h4 class="text-xl font-bold text-primary mb-4">
+                  Application Process
+                </h4>
+                <div class="flex flex-wrap gap-4">
+                  <div class="flex-1 min-w-[200px]">
+                    <div class="flex items-center mb-2">
+                      <div
+                        class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center mr-3"
+                      >
+                        1
+                      </div>
+                      <h5 class="font-bold text-gray-800">Choose Program</h5>
+                    </div>
+                    <p class="text-gray-600 text-sm">
+                      Select your desired program and university
+                    </p>
+                  </div>
+                  <div class="flex-1 min-w-[200px]">
+                    <div class="flex items-center mb-2">
+                      <div
+                        class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center mr-3"
+                      >
+                        2
+                      </div>
+                      <h5 class="font-bold text-gray-800">Prepare Documents</h5>
+                    </div>
+                    <p class="text-gray-600 text-sm">
+                      Academic transcripts, language tests, SOP
+                    </p>
+                  </div>
+                  <div class="flex-1 min-w-[200px]">
+                    <div class="flex items-center mb-2">
+                      <div
+                        class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center mr-3"
+                      >
+                        3
+                      </div>
+                      <h5 class="font-bold text-gray-800">Apply Online</h5>
+                    </div>
+                    <p class="text-gray-600 text-sm">
+                      Submit application through university portal
+                    </p>
+                  </div>
+                  <div class="flex-1 min-w-[200px]">
+                    <div class="flex items-center mb-2">
+                      <div
+                        class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center mr-3"
+                      >
+                        4
+                      </div>
+                      <h5 class="font-bold text-gray-800">Visa Process</h5>
+                    </div>
+                    <p class="text-gray-600 text-sm">
+                      Apply for study permit after acceptance
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-8">
+                <h4 class="text-xl font-bold text-primary mb-4">
+                  Popular Programs
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="program-badge px-4 py-2 bg-accent text-primary rounded-full"
+                    >Computer Science</span
+                  >
+                  <span
+                    class="program-badge px-4 py-2 bg-accent text-primary rounded-full"
+                    >Business Administration</span
+                  >
+                  <span
+                    class="program-badge px-4 py-2 bg-accent text-primary rounded-full"
+                    >Engineering</span
+                  >
+                  <span
+                    class="program-badge px-4 py-2 bg-accent text-primary rounded-full"
+                    >Health Sciences</span
+                  >
+                  <span
+                    class="program-badge px-4 py-2 bg-accent text-primary rounded-full"
+                    >Environmental Studies</span
+                  >
+                </div>
+              </div>
+
+              <div>
+                <h4 class="text-xl font-bold text-primary mb-4">
+                  Financial Information
+                </h4>
+                <div class="bg-white border border-gray-200 rounded-lg p-4">
+                  <div class="flex justify-between mb-3">
+                    <span class="text-gray-600">Tuition Fees:</span>
+                    <span class="font-semibold">$15,000 - $35,000/year</span>
+                  </div>
+                  <div class="flex justify-between mb-3">
+                    <span class="text-gray-600">Living Expenses:</span>
+                    <span class="font-semibold">$10,000 - $15,000/year</span>
+                  </div>
+                  <div class="flex justify-between mb-3">
+                    <span class="text-gray-600">Health Insurance:</span>
+                    <span class="font-semibold">$600 - $800/year</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">Part-time Work:</span>
+                    <span class="font-semibold">Up to 20 hrs/week</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center">
+          <button
+            class="px-6 py-3 bg-secondary text-white rounded-lg font-semibold hover:bg-opacity-90 transition mr-4"
+          >
+            <i class="fas fa-download mr-2"></i>Download Country Guide
+          </button>
+          <button
+            class="px-6 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition"
+          >
+            <i class="fas fa-calendar-check mr-2"></i>Book Free Consultation
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Page navigation functionality
+      const pages = document.querySelectorAll(".page");
+      const navButtons = document.querySelectorAll(".page-nav");
+
+      function showPage(pageId) {
+        // Hide all pages
+        pages.forEach((page) => {
+          page.classList.remove("active-page");
+        });
+
+        // Show selected page
+        document.getElementById(pageId).classList.add("active-page");
+
+        // Update active button
+        navButtons.forEach((button) => {
+          button.classList.remove("bg-primary", "text-white");
+          button.classList.add(
+            "text-gray-600",
+            "hover:bg-accent",
+            "hover:text-primary"
+          );
+        });
+
+        // Highlight active button
+        navButtons.forEach((button) => {
+          if (button.dataset.page === pageId) {
+            button.classList.remove(
+              "text-gray-600",
+              "hover:bg-accent",
+              "hover:text-primary"
+            );
+            button.classList.add("bg-primary", "text-white");
+          }
+        });
+      }
+
+      // Add click event to navigation buttons
+      navButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          showPage(button.dataset.page);
+        });
+      });
+
+      // Destination tabs functionality
+      const destinationTabs = document.querySelectorAll(".destination-tab");
+
+      destinationTabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          destinationTabs.forEach((t) => t.classList.remove("active"));
+          tab.classList.add("active");
+          // In a real implementation, this would load destination-specific data
+        });
+      });
+    </script>
+  </body>
+</html>

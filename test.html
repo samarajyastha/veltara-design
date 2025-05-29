@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Pages - Main Sections</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3498db",
+              secondary: "#2c3e50",
+              accent: "#e74c3c",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .testimonial-card {
+        transition: all 0.3s ease;
+      }
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .university-card {
+        transition: all 0.3s ease;
+      }
+      .university-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .destination-gallery img {
+        transition: all 0.3s ease;
+      }
+      .destination-gallery img:hover {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- University Page Main Section -->
+    <section
+      id="universities"
+      class="py-16 bg-gradient-to-br from-blue-50 to-indigo-50"
+    >
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+            Top Universities Worldwide
+          </h2>
+          <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+          <p class="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
+            Discover prestigious institutions that shape future leaders. Find
+            your perfect academic match.
+          </p>
+        </div>
+
+        <!-- Search and Filter -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-12 max-w-4xl mx-auto">
+          <div class="flex flex-col md:flex-row gap-4">
+            <div class="flex-1">
+              <input
+                type="text"
+                placeholder="Search by university name..."
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+            </div>
+            <div class="w-full md:w-64">
+              <select
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+              >
+                <option>All Countries</option>
+                <option>United States</option>
+                <option>United Kingdom</option>
+                <option>Canada</option>
+                <option>Australia</option>
+                <option>Germany</option>
+              </select>
+            </div>
+            <button
+              class="bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition duration-300"
+            >
+              <i class="fas fa-search mr-2"></i> Search
+            </button>
+          </div>
+        </div>
+
+        <!-- University Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- University Card 1 -->
+          <div
+            class="university-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Stanford University"
+                class="w-full h-48 object-cover"
+              />
+              <div
+                class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold"
+              >
+                #1 Ranked
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800">
+                    Stanford University
+                  </h3>
+                  <p class="text-gray-600 flex items-center mt-1">
+                    <i class="fas fa-map-marker-alt text-primary mr-2"></i>
+                    Stanford, California
+                  </p>
+                </div>
+                <div
+                  class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16"
+                />
+              </div>
+              <div class="flex items-center mt-4">
+                <div class="flex items-center text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="ml-2 text-gray-600">4.7 (1,243 reviews)</span>
+              </div>
+              <p class="mt-4 text-gray-600">
+                Prestigious private research university known for academic
+                strength, wealth, and proximity to Silicon Valley.
+              </p>
+              <div class="mt-6 flex justify-between items-center">
+                <span class="text-xl font-bold text-primary">$52,857/year</span>
+                <button
+                  class="bg-secondary hover:bg-gray-800 text-white px-4 py-2 rounded-lg transition duration-300"
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- University Card 2 -->
+          <div
+            class="university-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Oxford University"
+                class="w-full h-48 object-cover"
+              />
+              <div
+                class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold"
+              >
+                #2 Ranked
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800">
+                    University of Oxford
+                  </h3>
+                  <p class="text-gray-600 flex items-center mt-1">
+                    <i class="fas fa-map-marker-alt text-primary mr-2"></i>
+                    Oxford, England
+                  </p>
+                </div>
+                <div
+                  class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16"
+                />
+              </div>
+              <div class="flex items-center mt-4">
+                <div class="flex items-center text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="ml-2 text-gray-600">4.9 (987 reviews)</span>
+              </div>
+              <p class="mt-4 text-gray-600">
+                Oldest university in the English-speaking world, renowned for
+                its tutorial-based teaching system.
+              </p>
+              <div class="mt-6 flex justify-between items-center">
+                <span class="text-xl font-bold text-primary">£33,825/year</span>
+                <button
+                  class="bg-secondary hover:bg-gray-800 text-white px-4 py-2 rounded-lg transition duration-300"
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- University Card 3 -->
+          <div
+            class="university-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1532626256-872d775847e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="MIT"
+                class="w-full h-48 object-cover"
+              />
+              <div
+                class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold"
+              >
+                #3 Ranked
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800">MIT</h3>
+                  <p class="text-gray-600 flex items-center mt-1">
+                    <i class="fas fa-map-marker-alt text-primary mr-2"></i>
+                    Cambridge, Massachusetts
+                  </p>
+                </div>
+                <div
+                  class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16"
+                />
+              </div>
+              <div class="flex items-center mt-4">
+                <div class="flex items-center text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="ml-2 text-gray-600">4.8 (1,532 reviews)</span>
+              </div>
+              <p class="mt-4 text-gray-600">
+                World leader in science and technology education with a strong
+                entrepreneurial culture.
+              </p>
+              <div class="mt-6 flex justify-between items-center">
+                <span class="text-xl font-bold text-primary">$53,790/year</span>
+                <button
+                  class="bg-secondary hover:bg-gray-800 text-white px-4 py-2 rounded-lg transition duration-300"
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- View All Button -->
+        <div class="text-center mt-12">
+          <button
+            class="bg-primary hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105"
+          >
+            View All Universities <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Page Main Section -->
+    <section
+      id="testimonials"
+      class="py-16 bg-gradient-to-br from-purple-50 to-pink-50"
+    >
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+            Student Success Stories
+          </h2>
+          <div class="w-24 h-1 bg-accent mx-auto rounded-full"></div>
+          <p class="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
+            Hear from students who transformed their lives through international
+            education
+          </p>
+        </div>
+
+        <!-- Testimonial Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div
+            class="testimonial-card bg-white rounded-xl shadow-lg p-8 transition duration-300"
+          >
+            <div class="flex items-center mb-6">
+              <div
+                class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16"
+              />
+              <div class="ml-4">
+                <h4 class="font-bold text-lg">Sarah Johnson</h4>
+                <p class="text-primary">Computer Science, Stanford</p>
+              </div>
+            </div>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 italic mb-6">
+              "Studying at Stanford was a life-changing experience. The
+              cutting-edge research opportunities and connections I made opened
+              doors I never imagined."
+            </p>
+            <div class="flex items-center text-gray-500">
+              <i class="fas fa-graduation-cap text-primary mr-2"></i>
+              <span>Now working at Google as a Software Engineer</span>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="testimonial-card bg-white rounded-xl shadow-lg p-8 transition duration-300"
+          >
+            <div class="flex items-center mb-6">
+              <div
+                class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16"
+              />
+              <div class="ml-4">
+                <h4 class="font-bold text-lg">David Kim</h4>
+                <p class="text-primary">Business, Oxford</p>
+              </div>
+            </div>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 italic mb-6">
+              "The tutorial system at Oxford challenged me to think critically
+              and defend my ideas. This experience was invaluable for my career
+              in consulting."
+            </p>
+            <div class="flex items-center text-gray-500">
+              <i class="fas fa-briefcase text-primary mr-2"></i>
+              <span>Management Consultant at McKinsey & Company</span>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div
+            class="testimonial-card bg-white rounded-xl shadow-lg p-8 transition duration-300"
+          >
+            <div class="flex items-center mb-6">
+              <div
+                class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16"
+              />
+              <div class="ml-4">
+                <h4 class="font-bold text-lg">Emma Rodriguez</h4>
+                <p class="text-primary">Biomedical Engineering, MIT</p>
+              </div>
+            </div>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 italic mb-6">
+              "MIT's hands-on approach allowed me to work on real-world medical
+              device projects. I launched my startup right after graduation!"
+            </p>
+            <div class="flex items-center text-gray-500">
+              <i class="fas fa-rocket text-primary mr-2"></i>
+              <span>Founder & CEO at MedTech Innovations</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div
+          class="bg-white rounded-xl shadow-lg p-8 mt-12 grid grid-cols-2 md:grid-cols-4 gap-6"
+        >
+          <div class="text-center">
+            <div class="text-4xl font-bold text-primary">98%</div>
+            <div class="text-gray-600 mt-2">Admission Success Rate</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-primary">5,000+</div>
+            <div class="text-gray-600 mt-2">Students Placed</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-primary">$50M+</div>
+            <div class="text-gray-600 mt-2">Scholarships Secured</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-primary">27</div>
+            <div class="text-gray-600 mt-2">Countries Represented</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Destination Details Page Main Section -->
+    <section
+      id="destination"
+      class="py-16 bg-gradient-to-br from-green-50 to-cyan-50"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row gap-12">
+          <!-- Left Column -->
+          <div class="lg:w-2/3">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              Study in the United Kingdom
+            </h1>
+            <div class="w-24 h-1 bg-primary rounded-full mb-8"></div>
+
+            <!-- Gallery -->
+            <div class="destination-gallery grid grid-cols-2 gap-4 mb-8">
+              <div class="col-span-2">
+                <div
+                  class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64"
+                />
+              </div>
+              <div>
+                <div
+                  class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48"
+                />
+              </div>
+              <div>
+                <div
+                  class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48"
+                />
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div class="prose max-w-none mb-8">
+              <p class="text-lg text-gray-700 mb-4">
+                The United Kingdom offers a world-renowned education system with
+                centuries of academic excellence. UK degrees are recognized and
+                respected globally, providing a solid foundation for your future
+                career.
+              </p>
+              <p class="text-lg text-gray-700 mb-4">
+                With a diverse cultural landscape and vibrant student life,
+                studying in the UK is an enriching experience that extends
+                beyond the classroom. From historic Oxford and Cambridge to
+                modern London universities, you'll find institutions that match
+                your academic goals.
+              </p>
+              <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4">
+                Why Choose the UK?
+              </h3>
+              <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                <li>Home to 4 of the world's top 10 universities</li>
+                <li>Shorter degree programs save time and money</li>
+                <li>Opportunity to work part-time during studies</li>
+                <li>Post-study work visa options for graduates</li>
+                <li>Rich cultural experiences and travel opportunities</li>
+              </ul>
+            </div>
+
+            <!-- Top Universities -->
+            <div class="mb-8">
+              <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                Top Universities in the UK
+              </h3>
+              <div class="space-y-4">
+                <div class="flex items-center p-4 bg-white rounded-lg shadow">
+                  <div class="text-2xl font-bold text-primary mr-4">1</div>
+                  <div>
+                    <h4 class="font-bold">University of Oxford</h4>
+                    <p class="text-gray-600">World's #2 ranked university</p>
+                  </div>
+                </div>
+                <div class="flex items-center p-4 bg-white rounded-lg shadow">
+                  <div class="text-2xl font-bold text-primary mr-4">2</div>
+                  <div>
+                    <h4 class="font-bold">University of Cambridge</h4>
+                    <p class="text-gray-600">World's #3 ranked university</p>
+                  </div>
+                </div>
+                <div class="flex items-center p-4 bg-white rounded-lg shadow">
+                  <div class="text-2xl font-bold text-primary mr-4">3</div>
+                  <div>
+                    <h4 class="font-bold">Imperial College London</h4>
+                    <p class="text-gray-600">World leader in STEM education</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="lg:w-1/3">
+            <div class="bg-white rounded-xl shadow-lg p-6 sticky top-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Quick Facts</h3>
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-semibold text-gray-700">
+                    Average Tuition Fees
+                  </h4>
+                  <p class="text-primary font-bold">£10,000 - £38,000/year</p>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-700">Living Expenses</h4>
+                  <p class="text-primary font-bold">£12,000 - £15,000/year</p>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-700">Popular Programs</h4>
+                  <p class="text-gray-600">
+                    Business, Engineering, Law, Medicine, Computer Science
+                  </p>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-700">
+                    Post-Study Work Visa
+                  </h4>
+                  <p class="text-gray-600">2-3 years after graduation</p>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-700">
+                    Application Deadline
+                  </h4>
+                  <p class="text-gray-600">January 15 for most universities</p>
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">
+                  Ready to Apply?
+                </h3>
+                <button
+                  class="w-full bg-primary hover:bg-blue-600 text-white py-3 rounded-lg font-semibold transition duration-300 mb-4"
+                >
+                  <i class="fas fa-download mr-2"></i> Download Application
+                  Guide
+                </button>
+                <button
+                  class="w-full bg-secondary hover:bg-gray-800 text-white py-3 rounded-lg font-semibold transition duration-300"
+                >
+                  <i class="fas fa-calendar-check mr-2"></i> Book Consultation
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Simple hover effect enhancements
+      document.querySelectorAll(".university-card").forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          card.style.boxShadow =
+            "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)";
+        });
+
+        card.addEventListener("mouseleave", () => {
+          card.style.boxShadow =
+            "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)";
+        });
+      });
+    </script>
+  </body>
+</html>
