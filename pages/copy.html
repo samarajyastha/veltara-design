@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Veltara Consultants - Your Gateway to World-Class Education Abroad
-    </title>
+    <title>Veltara Consultants - Guiding your future</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -24,149 +22,144 @@
       };
     </script>
     <style>
-      .hero-bg {
-        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-          url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
-        background-size: cover;
-        background-position: center;
-      }
+      @layer utilities {
+        .footer-layout {
+          display: grid;
+          grid-template-areas:
+            "footer-intro"
+            "footer-quick-links"
+            "footer-destinations"
+            "footer-contact";
+        }
 
-      .country-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      }
+        .footer-intro {
+          grid-area: footer-intro;
+        }
 
-      .testimonial-card {
-        transition: all 0.3s ease;
-      }
+        .footer-quick-links {
+          grid-area: footer-quick-links;
+        }
 
-      .testimonial-card:hover {
-        transform: scale(1.05);
+        .footer-destinations {
+          grid-area: footer-destinations;
+        }
+
+        .footer-contact {
+          grid-area: footer-contact;
+        }
+
+        @media screen and (min-width: 768px) {
+          .footer-layout {
+            grid-template-areas:
+              "footer-intro footer-contact"
+              "footer-quick-links footer-destinations";
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+
+        @media screen and (min-width: 1120px) {
+          .footer-layout {
+            grid-template-areas: "footer-intro footer-quick-links footer-destinations footer-contact";
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+          }
+        }
       }
     </style>
   </head>
   <body class="font-sans bg-gray-50">
     <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-      <div
-        class="container mx-auto px-4 py-3 flex justify-between items-center"
-      >
-        <a href="index.html" class="text-2xl font-bold text-primary">
-          <span class="text-secondary">Veltara</span> Consultants
-        </a>
-        <div class="hidden md:flex space-x-8">
+    <header>
+      <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div
+          class="container mx-auto px-4 py-4 flex justify-between items-center"
+        >
           <a
             href="index.html"
-            class="text-gray-700 hover:text-primary font-medium"
+            class="text-2xl font-bold text-primary flex items-center space-x-2"
+          >
+            <img src="/images/logo.png" alt="" class="h-10 w-auto" />
+            <span class="text-secondary pr-1">Veltara</span> Consultants
+          </a>
+          <div class="hidden lg:flex space-x-4 xl:space-x-8">
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >About Us</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Services</a
+            >
+            <a
+              href="destinations.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Study Destinations</a
+            >
+            <a
+              href="testimonials.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Success Stories</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Contact</a
+            >
+          </div>
+          <button class="lg:hidden text-gray-700" id="mobile-menu-button">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div
+          class="lg:hidden hidden bg-white w-full py-2 px-4 shadow-lg"
+          id="mobile-menu"
+        >
+          <a
+            href="pages/index.html"
+            class="block py-2 text-gray-700 hover:text-primary"
             >Home</a
           >
           <a
             href="about.html"
-            class="text-gray-700 hover:text-primary font-medium"
+            class="block py-2 text-gray-700 hover:text-primary"
             >About Us</a
           >
           <a
             href="services.html"
-            class="text-gray-700 hover:text-primary font-medium"
+            class="block py-2 text-gray-700 hover:text-primary"
             >Services</a
           >
           <a
             href="destinations.html"
-            class="text-gray-700 hover:text-primary font-medium"
+            class="block py-2 text-gray-700 hover:text-primary"
             >Study Destinations</a
           >
           <a
-            href="universities.html"
-            class="text-gray-700 hover:text-primary font-medium"
-            >Universities</a
-          >
-          <a
             href="testimonials.html"
-            class="text-gray-700 hover:text-primary font-medium"
+            class="block py-2 text-gray-700 hover:text-primary"
             >Success Stories</a
           >
           <a
             href="contact.html"
-            class="text-gray-700 hover:text-primary font-medium"
+            class="block py-2 text-gray-700 hover:text-primary"
             >Contact</a
           >
         </div>
-        <button class="md:hidden text-gray-700" id="mobile-menu-button">
-          <i class="fas fa-bars text-xl"></i>
-        </button>
-      </div>
-      <!-- Mobile Menu -->
-      <div
-        class="md:hidden hidden bg-white w-full py-2 px-4 shadow-lg"
-        id="mobile-menu"
-      >
-        <a href="index.html" class="block py-2 text-gray-700 hover:text-primary"
-          >Home</a
-        >
-        <a href="about.html" class="block py-2 text-gray-700 hover:text-primary"
-          >About Us</a
-        >
-        <a
-          href="services.html"
-          class="block py-2 text-gray-700 hover:text-primary"
-          >Services</a
-        >
-        <a
-          href="destinations.html"
-          class="block py-2 text-gray-700 hover:text-primary"
-          >Study Destinations</a
-        >
-        <a
-          href="universities.html"
-          class="block py-2 text-gray-700 hover:text-primary"
-          >Universities</a
-        >
-        <a
-          href="testimonials.html"
-          class="block py-2 text-gray-700 hover:text-primary"
-          >Success Stories</a
-        >
-        <a
-          href="contact.html"
-          class="block py-2 text-gray-700 hover:text-primary"
-          >Contact</a
-        >
-      </div>
-    </nav>
-
-    <!-- Newsletter -->
-    <section class="py-16 bg-gray-50">
-      <div class="container mx-auto px-4 max-w-4xl">
-        <div class="bg-white p-8 rounded-lg shadow-sm text-center">
-          <h2 class="text-2xl font-bold mb-4 text-gray-800">
-            Stay Updated With Study Abroad News
-          </h2>
-          <p class="text-gray-600 mb-6">
-            Subscribe to our newsletter for the latest updates on universities,
-            scholarships, and visa policies.
-          </p>
-          <form class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Your email address"
-              class="flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-            />
-            <button
-              type="submit"
-              class="bg-primary hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300"
-            >
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
+      </nav>
+    </header>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white pt-12 pb-6">
       <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-4 gap-8 mb-8">
-          <div>
+        <div class="footer-layout gap-8 mb-8">
+          <div class="footer-intro">
             <h3 class="text-xl font-bold mb-4 text-primary">
               Veltara Consultants
             </h3>
@@ -189,11 +182,13 @@
               ></a>
             </div>
           </div>
-          <div>
+          <div class="footer-quick-links">
             <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
             <ul class="space-y-2">
               <li>
-                <a href="index.html" class="text-gray-400 hover:text-white"
+                <a
+                  href="pages/index.html"
+                  class="text-gray-400 hover:text-white"
                   >Home</a
                 >
               </li>
@@ -221,9 +216,49 @@
                   >Success Stories</a
                 >
               </li>
+              <li>
+                <a href="contact.html" class="text-gray-400 hover:text-white"
+                  >Contact</a
+                >
+              </li>
             </ul>
           </div>
-          <div>
+          <div class="footer-destinations">
+            <h4 class="text-lg font-semibold mb-4">Destinations</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in UK</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in USA</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in Canada</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in New Zealand</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in Australia</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in Denmark</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-contact">
             <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
             <ul class="space-y-2 text-gray-400">
               <li class="flex items-start">
@@ -240,29 +275,12 @@
               </li>
             </ul>
           </div>
-          <div>
-            <h4 class="text-lg font-semibold mb-4">Office Hours</h4>
-            <ul class="space-y-2 text-gray-400">
-              <li class="flex justify-between">
-                <span>Monday - Friday</span>
-                <span>9:00 AM - 6:00 PM</span>
-              </li>
-              <li class="flex justify-between">
-                <span>Saturday</span>
-                <span>10:00 AM - 4:00 PM</span>
-              </li>
-              <li class="flex justify-between">
-                <span>Sunday</span>
-                <span>Closed</span>
-              </li>
-            </ul>
-          </div>
         </div>
         <div
           class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center"
         >
           <p class="text-gray-400 text-sm">
-            © 2023 Veltara Consultants. All rights reserved.
+            © 2025 Veltara Consultants. All rights reserved.
           </p>
           <div class="flex space-x-6 mt-4 md:mt-0">
             <a
@@ -280,14 +298,6 @@
         </div>
       </div>
     </footer>
-
-    <!-- WhatsApp Float -->
-    <a
-      href="https://wa.me/1234567890"
-      class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition duration-300 z-40"
-    >
-      <i class="fab fa-whatsapp text-2xl"></i>
-    </a>
 
     <script>
       // Mobile menu toggle
