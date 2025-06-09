@@ -64,6 +64,16 @@
           }
         }
       }
+
+      .program-badge {
+        transition: all 0.2s ease;
+      }
+
+      .program-badge:hover {
+        background-color: #36705f;
+        color: white;
+        transform: scale(1.05);
+      }
     </style>
   </head>
   <body class="font-sans bg-gray-50">
@@ -98,7 +108,7 @@
             >
             <a
               href="destinations.html"
-              class="text-gray-700 hover:text-primary text-secondary font-medium"
+              class="text-gray-700 hover:text-primary font-medium"
               >Study Destinations</a
             >
             <a
@@ -138,7 +148,7 @@
           >
           <a
             href="destinations.html"
-            class="block py-2 text-gray-700 hover:text-primary"
+            class="block py-2 text-gray-700 text-secondary hover:text-primary"
             >Study Destinations</a
           >
           <a
@@ -206,201 +216,174 @@
           </button>
         </div>
 
-        <!-- Country Cards -->
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          <!-- UK -->
-          <div
-            id="uk"
-            class="bg-white rounded-lg overflow-hidden shadow-md country-card transition duration-300"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1486299267070-83823f5448dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
-              alt="UK"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-6">
-              <h2 class="text-2xl font-bold mb-3 text-gray-800">
-                United Kingdom
-              </h2>
-              <div class="flex items-center text-gray-600 mb-4">
-                <i class="fas fa-university mr-2"></i>
-                <span>Top Universities: Oxford, Cambridge, Imperial</span>
+        <!-- Destination Details -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+          <div class="md:flex">
+            <div
+              class="md:w-2/5 bg-gradient-to-b from-primary to-secondary p-8 text-white"
+            >
+              <h3 class="text-2xl font-bold mb-4">Study in Canada</h3>
+              <div class="mb-6">
+                <h4 class="text-lg font-semibold mb-2">Why Canada?</h4>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mt-1 mr-2"></i>
+                    <span>World-class education system</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mt-1 mr-2"></i>
+                    <span>Multicultural and welcoming society</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mt-1 mr-2"></i>
+                    <span>Post-study work opportunities</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mt-1 mr-2"></i>
+                    <span>Safe and high quality of life</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mt-1 mr-2"></i>
+                    <span>Pathway to permanent residency</span>
+                  </li>
+                </ul>
               </div>
-              <div class="flex items-center text-gray-600 mb-4">
-                <i class="fas fa-pound-sign mr-2"></i>
-                <span>Avg. Tuition: £10,000 - £38,000/year</span>
-              </div>
-              <div class="flex items-center text-gray-600 mb-4">
-                <i class="fas fa-briefcase mr-2"></i>
-                <span>Post-Study Work: 2 years</span>
-              </div>
-              <a
-                href="destination-details.html"
-                class="inline-block bg-primary hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300"
-                >Details</a
-              >
-            </div>
-          </div>
 
-          <!-- USA -->
-          <div
-            id="usa"
-            class="bg-white rounded-lg overflow-hidden shadow-md country-card transition duration-300"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
-              alt="USA"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-6">
-              <h2 class="text-2xl font-bold mb-3 text-gray-800">
-                United States
-              </h2>
-              <div class="flex items-center text-gray-600 mb-4">
-                <i class="fas fa-university mr-2"></i>
-                <span>Top Universities: Harvard, MIT, Stanford</span>
+              <div>
+                <h4 class="text-lg font-semibold mb-2">Quick Facts</h4>
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <div class="text-sm">Avg. Tuition</div>
+                    <div class="font-bold">$15,000 - $35,000</div>
+                  </div>
+                  <div>
+                    <div class="text-sm">Living Costs</div>
+                    <div class="font-bold">$10,000 - $15,000/yr</div>
+                  </div>
+                  <div>
+                    <div class="text-sm">Work Permit</div>
+                    <div class="font-bold">Up to 3 years</div>
+                  </div>
+                  <div>
+                    <div class="text-sm">Top Universities</div>
+                    <div class="font-bold">UofT, UBC, McGill</div>
+                  </div>
+                </div>
               </div>
-              <div class="flex items-center text-gray-600 mb-4">
-                <i class="fas fa-dollar-sign mr-2"></i>
-                <span>Avg. Tuition: $20,000 - $55,000/year</span>
-              </div>
-              <div class="flex items-center text-gray-600 mb-4">
-                <i class="fas fa-briefcase mr-2"></i>
-                <span>OPT: 1-3 years depending on field</span>
-              </div>
-              <a
-                href="destination-details.html"
-                class="inline-block bg-primary hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300"
-                >Details</a
-              >
             </div>
-          </div>
 
-          <!-- Australia -->
-          <div
-            id="australia"
-            class="bg-white rounded-lg overflow-hidden shadow-md country-card transition duration-300"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-              alt="Australia"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-6">
-              <h2 class="text-2xl font-bold mb-3 text-gray-800">Australia</h2>
-              <div class="flex items-center text-gray-600 mb-4">
-                <i class="fas fa-university mr-2"></i>
-                <span>Top Universities: Melbourne, Sydney, ANU</span>
+            <div class="md:w-3/5 p-8">
+              <div class="mb-8">
+                <h4 class="text-xl font-bold text-primary mb-4">
+                  Application Process
+                </h4>
+                <div class="flex flex-wrap gap-4">
+                  <div class="flex-1 min-w-[200px]">
+                    <div class="flex items-center mb-2">
+                      <div
+                        class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center mr-3"
+                      >
+                        1
+                      </div>
+                      <h5 class="font-bold text-gray-800">Choose Program</h5>
+                    </div>
+                    <p class="text-gray-600 text-sm">
+                      Select your desired program and university
+                    </p>
+                  </div>
+                  <div class="flex-1 min-w-[200px]">
+                    <div class="flex items-center mb-2">
+                      <div
+                        class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center mr-3"
+                      >
+                        2
+                      </div>
+                      <h5 class="font-bold text-gray-800">Prepare Documents</h5>
+                    </div>
+                    <p class="text-gray-600 text-sm">
+                      Academic transcripts, language tests, SOP
+                    </p>
+                  </div>
+                  <div class="flex-1 min-w-[200px]">
+                    <div class="flex items-center mb-2">
+                      <div
+                        class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center mr-3"
+                      >
+                        3
+                      </div>
+                      <h5 class="font-bold text-gray-800">Apply Online</h5>
+                    </div>
+                    <p class="text-gray-600 text-sm">
+                      Submit application through university portal
+                    </p>
+                  </div>
+                  <div class="flex-1 min-w-[200px]">
+                    <div class="flex items-center mb-2">
+                      <div
+                        class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center mr-3"
+                      >
+                        4
+                      </div>
+                      <h5 class="font-bold text-gray-800">Visa Process</h5>
+                    </div>
+                    <p class="text-gray-600 text-sm">
+                      Apply for study permit after acceptance
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="flex items-center text-gray-600 mb-4">
-                <i class="fas fa-dollar-sign mr-2"></i>
-                <span>Avg. Tuition: AUD 20,000 - 45,000/year</span>
-              </div>
-              <div class="flex items-center text-gray-600 mb-4">
-                <i class="fas fa-briefcase mr-2"></i>
-                <span>Post-Study Work: 2-6 years</span>
-              </div>
-              <a
-                href="destination-details.html"
-                class="inline-block bg-primary hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300"
-                >Details</a
-              >
-            </div>
-          </div>
 
-          <!-- Canada -->
-          <div
-            id="canada"
-            class="bg-white rounded-lg overflow-hidden shadow-md country-card transition duration-300"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-              alt="Canada"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-6">
-              <h2 class="text-2xl font-bold mb-3 text-gray-800">Canada</h2>
-              <div class="flex items-center text-gray-600 mb-4">
-                <i class="fas fa-university mr-2"></i>
-                <span>Top Universities: Toronto, UBC, McGill</span>
+              <div class="mb-8">
+                <h4 class="text-xl font-bold text-primary mb-4">
+                  Popular Programs
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="program-badge px-4 py-2 bg-gray-100 text-primary rounded-full"
+                    >Computer Science</span
+                  >
+                  <span
+                    class="program-badge px-4 py-2 bg-gray-100 text-primary rounded-full"
+                    >Business Administration</span
+                  >
+                  <span
+                    class="program-badge px-4 py-2 bg-gray-100 text-primary rounded-full"
+                    >Engineering</span
+                  >
+                  <span
+                    class="program-badge px-4 py-2 bg-gray-100 text-primary rounded-full"
+                    >Health Sciences</span
+                  >
+                  <span
+                    class="program-badge px-4 py-2 bg-gray-100 text-primary rounded-full"
+                    >Environmental Studies</span
+                  >
+                </div>
               </div>
-              <div class="flex items-center text-gray-600 mb-4">
-                <i class="fas fa-dollar-sign mr-2"></i>
-                <span>Avg. Tuition: CAD 15,000 - 35,000/year</span>
-              </div>
-              <div class="flex items-center text-gray-600 mb-4">
-                <i class="fas fa-briefcase mr-2"></i>
-                <span>PGWP: Up to 3 years</span>
-              </div>
-              <a
-                href="destination-details.html"
-                class="inline-block bg-primary hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300"
-                >Details</a
-              >
-            </div>
-          </div>
 
-          <!-- Denmark -->
-          <div
-            id="denmark"
-            class="bg-white rounded-lg overflow-hidden shadow-md country-card transition duration-300"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-              alt="Denmark"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-6">
-              <h2 class="text-2xl font-bold mb-3 text-gray-800">Denmark</h2>
-              <div class="flex items-center text-gray-600 mb-4">
-                <i class="fas fa-university mr-2"></i>
-                <span>Top Universities: Copenhagen, Aalborg, Roskilde </span>
+              <div>
+                <h4 class="text-xl font-bold text-primary mb-4">
+                  Financial Information
+                </h4>
+                <div class="bg-white border border-gray-200 rounded-lg p-4">
+                  <div class="flex justify-between mb-3">
+                    <span class="text-gray-600">Tuition Fees:</span>
+                    <span class="font-semibold">$15,000 - $35,000/year</span>
+                  </div>
+                  <div class="flex justify-between mb-3">
+                    <span class="text-gray-600">Living Expenses:</span>
+                    <span class="font-semibold">$10,000 - $15,000/year</span>
+                  </div>
+                  <div class="flex justify-between mb-3">
+                    <span class="text-gray-600">Health Insurance:</span>
+                    <span class="font-semibold">$600 - $800/year</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">Part-time Work:</span>
+                    <span class="font-semibold">Up to 20 hrs/week</span>
+                  </div>
+                </div>
               </div>
-              <div class="flex items-center text-gray-600 mb-4">
-                <i class="fas fa-euro-sign mr-2"></i>
-                <span>Avg. Tuition: €0 - €20,000/year</span>
-              </div>
-              <div class="flex items-center text-gray-600 mb-4">
-                <i class="fas fa-briefcase mr-2"></i>
-                <span>Post-Study Work: 18 months</span>
-              </div>
-              <a
-                href="destination-details.html"
-                class="inline-block bg-primary hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300"
-                >Details</a
-              >
-            </div>
-          </div>
-
-          <!-- New Zealand -->
-          <div
-            id="newzealand"
-            class="bg-white rounded-lg overflow-hidden shadow-md country-card transition duration-300"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
-              alt="New Zealand"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-6">
-              <h2 class="text-2xl font-bold mb-3 text-gray-800">New Zealand</h2>
-              <div class="flex items-center text-gray-600 mb-4">
-                <i class="fas fa-university mr-2"></i>
-                <span>Top Universities: Auckland, Otago, Victoria</span>
-              </div>
-              <div class="flex items-center text-gray-600 mb-4">
-                <i class="fas fa-dollar-sign mr-2"></i>
-                <span>Avg. Tuition: NZD 20,000 - 40,000/year</span>
-              </div>
-              <div class="flex items-center text-gray-600 mb-4">
-                <i class="fas fa-briefcase mr-2"></i>
-                <span>Post-Study Work: 1-3 years</span>
-              </div>
-              <a
-                href="destination-details.html"
-                class="inline-block bg-primary hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300"
-                >Details</a
-              >
             </div>
           </div>
         </div>

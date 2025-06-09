@@ -20,6 +20,14 @@
           },
         },
       };
+
+      async function loadComponent(id, file) {
+        const res = await fetch(file);
+        const html = await res.text();
+        document.getElementById(id).innerHTML = html;
+      }
+
+      loadComponent("navbar", "/components/navbar.html");
     </script>
     <style>
       @layer utilities {
@@ -68,7 +76,7 @@
   </head>
   <body class="font-sans bg-gray-50">
     <!-- Navigation -->
-    <header>
+    <!-- <header>
       <nav class="bg-white shadow-md sticky top-0 z-50">
         <div
           class="container mx-auto px-4 py-4 flex justify-between items-center"
@@ -84,39 +92,59 @@
             <a
               href="index.html"
               class="text-gray-700 hover:text-primary font-medium"
-              >Home</a
+            >
+              <i class="fas fa-home mr-1"></i>
+              Home</a
             >
             <a
               href="about.html"
               class="text-gray-700 hover:text-primary font-medium"
-              >About Us</a
+            >
+              <i class="fas fa-users mr-1"></i>
+              About Us</a
             >
             <a
               href="services.html"
               class="text-gray-700 hover:text-primary font-medium"
-              >Services</a
+            >
+              <i class="fas fa-cog mr-1"></i>
+              Services</a
             >
             <a
               href="destinations.html"
               class="text-gray-700 hover:text-primary font-medium"
-              >Study Destinations</a
             >
+              <i class="fas fa-globe-americas mr-1"></i>
+              Study Destinations
+            </a>
             <a
               href="testimonials.html"
               class="text-gray-700 hover:text-primary font-medium"
-              >Success Stories</a
             >
+              <i class="fas fa-comments mr-1"></i>
+              Success Stories
+            </a>
             <a
               href="contact.html"
               class="text-gray-700 hover:text-primary font-medium"
-              >Contact</a
+            >
+              <i class="fas fa-headset mr-1"></i>
+              Contact</a
             >
           </div>
-          <button class="lg:hidden text-gray-700" id="mobile-menu-button">
-            <i class="fas fa-bars text-xl"></i>
-          </button>
+          <div class="flex items-center gap-3">
+            <button
+              type="button"
+              class="text-white bg-black hover:bg-black/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center flex items-center gap-2"
+            >
+              <img src="/images/whatsapp-logo.svg" alt="" class="w-5 h-5" />
+              <span class="border-l-1 pl-2">WhatsApp Us</span>
+            </button>
+            <button class="lg:hidden text-gray-700" id="mobile-menu-button">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
         </div>
-        <!-- Mobile Menu -->
         <div
           class="lg:hidden hidden bg-white w-full py-2 px-4 shadow-lg"
           id="mobile-menu"
@@ -153,6 +181,10 @@
           >
         </div>
       </nav>
+    </header> -->
+
+    <header>
+      <div id="navbar"></div>
     </header>
 
     <!-- Footer -->
