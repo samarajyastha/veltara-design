@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veltara Consultants - Guiding your future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#36705f",
+              secondary: "#286291",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @layer utilities {
+        .footer-layout {
+          display: grid;
+          grid-template-areas:
+            "footer-intro"
+            "footer-quick-links"
+            "footer-destinations"
+            "footer-contact";
+        }
+
+        .footer-intro {
+          grid-area: footer-intro;
+        }
+
+        .footer-quick-links {
+          grid-area: footer-quick-links;
+        }
+
+        .footer-destinations {
+          grid-area: footer-destinations;
+        }
+
+        .footer-contact {
+          grid-area: footer-contact;
+        }
+
+        @media screen and (min-width: 768px) {
+          .footer-layout {
+            grid-template-areas:
+              "footer-intro footer-contact"
+              "footer-quick-links footer-destinations";
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+
+        @media screen and (min-width: 1120px) {
+          .footer-layout {
+            grid-template-areas: "footer-intro footer-quick-links footer-destinations footer-contact";
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <header>
+      <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div
+          class="container mx-auto px-4 py-4 flex justify-between items-center"
+        >
+          <a
+            href="index.html"
+            class="text-2xl font-bold text-primary flex items-center space-x-2"
+          >
+            <img src="/images/logo.png" alt="" class="h-10 w-auto" />
+            <span class="text-secondary pr-1">Veltara</span> Consultants
+          </a>
+          <div class="hidden lg:flex space-x-4 xl:space-x-8">
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-700 hover:text-primary text-secondary font-medium"
+              >About Us</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Services</a
+            >
+            <a
+              href="destinations.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Study Destinations</a
+            >
+            <a
+              href="testimonials.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Success Stories</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Contact</a
+            >
+          </div>
+          <button class="lg:hidden text-gray-700" id="mobile-menu-button">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div
+          class="lg:hidden hidden bg-white w-full py-2 px-4 shadow-lg"
+          id="mobile-menu"
+        >
+          <a
+            href="pages/index.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >About Us</a
+          >
+          <a
+            href="services.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Services</a
+          >
+          <a
+            href="destinations.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Study Destinations</a
+          >
+          <a
+            href="testimonials.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Success Stories</a
+          >
+          <a
+            href="contact.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Contact</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">
+            About Veltara Consultants
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Empowering students to achieve their international education dreams
+            since 2010.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Story</h2>
+            <p class="text-gray-600 mb-4">
+              Founded in 2010 by a group of international education enthusiasts,
+              Veltara Consultants began with a simple mission: to make quality
+              global education accessible to students from all backgrounds.
+            </p>
+            <p class="text-gray-600 mb-4">
+              What started as a small consultancy in a single office has now
+              grown into a trusted name with thousands of successful student
+              placements across top universities worldwide.
+            </p>
+            <p class="text-gray-600">
+              Our team of dedicated consultants brings together decades of
+              combined experience in international education, university
+              admissions, and career counseling.
+            </p>
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+              alt="Our Team"
+              class="w-full h-auto"
+            />
+          </div>
+        </div>
+
+        <div class="bg-gray-50 p-8 rounded-lg mb-16">
+          <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">
+            Our Mission & Vision
+          </h2>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <div class="text-primary text-4xl mb-4">
+                <i class="fas fa-bullseye"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-gray-800">Mission</h3>
+              <p class="text-gray-600">
+                To provide personalized, ethical guidance that helps students
+                navigate the complex journey of studying abroad, ensuring they
+                find the best academic and career opportunities tailored to
+                their aspirations.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <div class="text-primary text-4xl mb-4">
+                <i class="fas fa-eye"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-gray-800">Vision</h3>
+              <p class="text-gray-600">
+                To become the most trusted education consultancy globally,
+                recognized for transforming lives through education and creating
+                a community of globally competent professionals.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">
+            Why Choose Us?
+          </h2>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div
+              class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition duration-300"
+            >
+              <div class="text-secondary text-3xl mb-4">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-gray-800">
+                96% Success Rate
+              </h3>
+              <p class="text-gray-600">
+                Our students have an exceptional admission success rate at top
+                universities worldwide.
+              </p>
+            </div>
+            <div
+              class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition duration-300"
+            >
+              <div class="text-secondary text-3xl mb-4">
+                <i class="fas fa-hand-holding-heart"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-gray-800">
+                Ethical Practices
+              </h3>
+              <p class="text-gray-600">
+                We believe in transparency and ethical counseling without false
+                promises.
+              </p>
+            </div>
+            <div
+              class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition duration-300"
+            >
+              <div class="text-secondary text-3xl mb-4">
+                <i class="fas fa-network-wired"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-gray-800">
+                Global Network
+              </h3>
+              <p class="text-gray-600">
+                Strong partnerships with 200+ universities across 15 countries.
+              </p>
+            </div>
+            <div
+              class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition duration-300"
+            >
+              <div class="text-secondary text-3xl mb-4">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-gray-800">
+                Expert Team
+              </h3>
+              <p class="text-gray-600">
+                Our consultants average 8+ years of experience in international
+                education.
+              </p>
+            </div>
+            <div
+              class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition duration-300"
+            >
+              <div class="text-secondary text-3xl mb-4">
+                <i class="fas fa-headset"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-gray-800">
+                End-to-End Support
+              </h3>
+              <p class="text-gray-600">
+                From test prep to post-arrival assistance, we're with you at
+                every step.
+              </p>
+            </div>
+            <div
+              class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition duration-300"
+            >
+              <div class="text-secondary text-3xl mb-4">
+                <i class="fas fa-award"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-gray-800">
+                Award-Winning
+              </h3>
+              <p class="text-gray-600">
+                Recognized as "Best Education Consultancy" three years running.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-primary text-white p-8 rounded-lg">
+          <h2 class="text-3xl font-bold text-center mb-8">
+            Our Accreditations
+          </h2>
+          <div class="flex flex-wrap justify-center gap-12">
+            <img
+              src="../images/icef.png"
+              alt="ICEF Certified"
+              class="h-32 object-contain p-2 bg-gray-200 rounded-lg"
+            />
+            <img
+              src="../images/pier.png"
+              alt="PIER Certified"
+              class="h-32 object-contain p-2 bg-gray-200 rounded-lg"
+            />
+            <img
+              src="../images/british-council.png"
+              alt="British Council"
+              class="h-32 object-contain p-2 bg-gray-200 rounded-lg"
+            />
+            <img
+              src="../images/edu-usa.png"
+              alt="Education USA"
+              class="h-32 object-contain p-2 bg-gray-200 rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+      <div class="container mx-auto px-4">
+        <div class="footer-layout gap-8 mb-8">
+          <div class="footer-intro">
+            <h3 class="text-xl font-bold mb-4 text-primary">
+              Veltara Consultants
+            </h3>
+            <p class="text-gray-400">
+              Your trusted partner in achieving international education goals
+              with personalized guidance and expert support.
+            </p>
+            <div class="flex mt-4 space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-quick-links">
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="pages/index.html"
+                  class="text-gray-400 hover:text-white"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="text-gray-400 hover:text-white"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="services.html" class="text-gray-400 hover:text-white"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="destinations.html"
+                  class="text-gray-400 hover:text-white"
+                  >Study Destinations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="testimonials.html"
+                  class="text-gray-400 hover:text-white"
+                  >Success Stories</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-gray-400 hover:text-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-destinations">
+            <h4 class="text-lg font-semibold mb-4">Destinations</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in UK</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in USA</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in Canada</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in New Zealand</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in Australia</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in Denmark</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
+                <span>Central Plaza, Itahari-06, Sunsari</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone-alt mr-3 text-primary"></i>
+                <span>9852039698</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope mr-3 text-primary"></i>
+                <span>veltaraconsultants@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm">
+            © 2025 Veltara Consultants. All rights reserved.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a
+              href="privacy.html"
+              class="text-gray-400 hover:text-white text-sm"
+              >Privacy Policy</a
+            >
+            <a href="terms.html" class="text-gray-400 hover:text-white text-sm"
+              >Terms of Service</a
+            >
+            <a href="faq.html" class="text-gray-400 hover:text-white text-sm"
+              >FAQs</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
+        });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

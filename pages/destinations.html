@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veltara Consultants - Guiding your future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#36705f",
+              secondary: "#286291",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @layer utilities {
+        .footer-layout {
+          display: grid;
+          grid-template-areas:
+            "footer-intro"
+            "footer-quick-links"
+            "footer-destinations"
+            "footer-contact";
+        }
+
+        .footer-intro {
+          grid-area: footer-intro;
+        }
+
+        .footer-quick-links {
+          grid-area: footer-quick-links;
+        }
+
+        .footer-destinations {
+          grid-area: footer-destinations;
+        }
+
+        .footer-contact {
+          grid-area: footer-contact;
+        }
+
+        @media screen and (min-width: 768px) {
+          .footer-layout {
+            grid-template-areas:
+              "footer-intro footer-contact"
+              "footer-quick-links footer-destinations";
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+
+        @media screen and (min-width: 1120px) {
+          .footer-layout {
+            grid-template-areas: "footer-intro footer-quick-links footer-destinations footer-contact";
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <header>
+      <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div
+          class="container mx-auto px-4 py-4 flex justify-between items-center"
+        >
+          <a
+            href="index.html"
+            class="text-2xl font-bold text-primary flex items-center space-x-2"
+          >
+            <img src="/images/logo.png" alt="" class="h-10 w-auto" />
+            <span class="text-secondary pr-1">Veltara</span> Consultants
+          </a>
+          <div class="hidden lg:flex space-x-4 xl:space-x-8">
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >About Us</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Services</a
+            >
+            <a
+              href="destinations.html"
+              class="text-gray-700 hover:text-primary text-secondary font-medium"
+              >Study Destinations</a
+            >
+            <a
+              href="testimonials.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Success Stories</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Contact</a
+            >
+          </div>
+          <button class="lg:hidden text-gray-700" id="mobile-menu-button">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div
+          class="lg:hidden hidden bg-white w-full py-2 px-4 shadow-lg"
+          id="mobile-menu"
+        >
+          <a
+            href="pages/index.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >About Us</a
+          >
+          <a
+            href="services.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Services</a
+          >
+          <a
+            href="destinations.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Study Destinations</a
+          >
+          <a
+            href="testimonials.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Success Stories</a
+          >
+          <a
+            href="contact.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Contact</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">
+            Explore Study Destinations
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover the perfect country for your international education
+            journey.
+          </p>
+        </div>
+
+        <!-- Country Filter -->
+        <div class="flex flex-wrap justify-center gap-2 mb-12">
+          <button
+            class="px-4 py-2 rounded-full bg-primary text-white font-medium"
+          >
+            All
+          </button>
+          <button
+            class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium transition duration-300"
+          >
+            UK
+          </button>
+          <button
+            class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium transition duration-300"
+          >
+            USA
+          </button>
+          <button
+            class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium transition duration-300"
+          >
+            Australia
+          </button>
+          <button
+            class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium transition duration-300"
+          >
+            Canada
+          </button>
+          <button
+            class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium transition duration-300"
+          >
+            Denmark
+          </button>
+          <button
+            class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium transition duration-300"
+          >
+            New Zealand
+          </button>
+        </div>
+
+        <!-- Country Cards -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <!-- UK -->
+          <div
+            id="uk"
+            class="bg-white rounded-lg overflow-hidden shadow-md country-card transition duration-300"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1486299267070-83823f5448dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+              alt="UK"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h2 class="text-2xl font-bold mb-3 text-gray-800">
+                United Kingdom
+              </h2>
+              <div class="flex items-center text-gray-600 mb-4">
+                <i class="fas fa-university mr-2"></i>
+                <span>Top Universities: Oxford, Cambridge, Imperial</span>
+              </div>
+              <div class="flex items-center text-gray-600 mb-4">
+                <i class="fas fa-pound-sign mr-2"></i>
+                <span>Avg. Tuition: £10,000 - £38,000/year</span>
+              </div>
+              <div class="flex items-center text-gray-600 mb-4">
+                <i class="fas fa-briefcase mr-2"></i>
+                <span>Post-Study Work: 2 years</span>
+              </div>
+              <a
+                href="destination-details.html"
+                class="inline-block bg-primary hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300"
+                >Details</a
+              >
+            </div>
+          </div>
+
+          <!-- USA -->
+          <div
+            id="usa"
+            class="bg-white rounded-lg overflow-hidden shadow-md country-card transition duration-300"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+              alt="USA"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h2 class="text-2xl font-bold mb-3 text-gray-800">
+                United States
+              </h2>
+              <div class="flex items-center text-gray-600 mb-4">
+                <i class="fas fa-university mr-2"></i>
+                <span>Top Universities: Harvard, MIT, Stanford</span>
+              </div>
+              <div class="flex items-center text-gray-600 mb-4">
+                <i class="fas fa-dollar-sign mr-2"></i>
+                <span>Avg. Tuition: $20,000 - $55,000/year</span>
+              </div>
+              <div class="flex items-center text-gray-600 mb-4">
+                <i class="fas fa-briefcase mr-2"></i>
+                <span>OPT: 1-3 years depending on field</span>
+              </div>
+              <a
+                href="destination-details.html"
+                class="inline-block bg-primary hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300"
+                >Details</a
+              >
+            </div>
+          </div>
+
+          <!-- Australia -->
+          <div
+            id="australia"
+            class="bg-white rounded-lg overflow-hidden shadow-md country-card transition duration-300"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+              alt="Australia"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h2 class="text-2xl font-bold mb-3 text-gray-800">Australia</h2>
+              <div class="flex items-center text-gray-600 mb-4">
+                <i class="fas fa-university mr-2"></i>
+                <span>Top Universities: Melbourne, Sydney, ANU</span>
+              </div>
+              <div class="flex items-center text-gray-600 mb-4">
+                <i class="fas fa-dollar-sign mr-2"></i>
+                <span>Avg. Tuition: AUD 20,000 - 45,000/year</span>
+              </div>
+              <div class="flex items-center text-gray-600 mb-4">
+                <i class="fas fa-briefcase mr-2"></i>
+                <span>Post-Study Work: 2-6 years</span>
+              </div>
+              <a
+                href="destination-details.html"
+                class="inline-block bg-primary hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300"
+                >Details</a
+              >
+            </div>
+          </div>
+
+          <!-- Canada -->
+          <div
+            id="canada"
+            class="bg-white rounded-lg overflow-hidden shadow-md country-card transition duration-300"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+              alt="Canada"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h2 class="text-2xl font-bold mb-3 text-gray-800">Canada</h2>
+              <div class="flex items-center text-gray-600 mb-4">
+                <i class="fas fa-university mr-2"></i>
+                <span>Top Universities: Toronto, UBC, McGill</span>
+              </div>
+              <div class="flex items-center text-gray-600 mb-4">
+                <i class="fas fa-dollar-sign mr-2"></i>
+                <span>Avg. Tuition: CAD 15,000 - 35,000/year</span>
+              </div>
+              <div class="flex items-center text-gray-600 mb-4">
+                <i class="fas fa-briefcase mr-2"></i>
+                <span>PGWP: Up to 3 years</span>
+              </div>
+              <a
+                href="destination-details.html"
+                class="inline-block bg-primary hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300"
+                >Details</a
+              >
+            </div>
+          </div>
+
+          <!-- Denmark -->
+          <div
+            id="denmark"
+            class="bg-white rounded-lg overflow-hidden shadow-md country-card transition duration-300"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+              alt="Denmark"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h2 class="text-2xl font-bold mb-3 text-gray-800">Denmark</h2>
+              <div class="flex items-center text-gray-600 mb-4">
+                <i class="fas fa-university mr-2"></i>
+                <span>Top Universities: Copenhagen, Aalborg, Roskilde </span>
+              </div>
+              <div class="flex items-center text-gray-600 mb-4">
+                <i class="fas fa-euro-sign mr-2"></i>
+                <span>Avg. Tuition: €0 - €20,000/year</span>
+              </div>
+              <div class="flex items-center text-gray-600 mb-4">
+                <i class="fas fa-briefcase mr-2"></i>
+                <span>Post-Study Work: 18 months</span>
+              </div>
+              <a
+                href="destination-details.html"
+                class="inline-block bg-primary hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300"
+                >Details</a
+              >
+            </div>
+          </div>
+
+          <!-- New Zealand -->
+          <div
+            id="newzealand"
+            class="bg-white rounded-lg overflow-hidden shadow-md country-card transition duration-300"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+              alt="New Zealand"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h2 class="text-2xl font-bold mb-3 text-gray-800">New Zealand</h2>
+              <div class="flex items-center text-gray-600 mb-4">
+                <i class="fas fa-university mr-2"></i>
+                <span>Top Universities: Auckland, Otago, Victoria</span>
+              </div>
+              <div class="flex items-center text-gray-600 mb-4">
+                <i class="fas fa-dollar-sign mr-2"></i>
+                <span>Avg. Tuition: NZD 20,000 - 40,000/year</span>
+              </div>
+              <div class="flex items-center text-gray-600 mb-4">
+                <i class="fas fa-briefcase mr-2"></i>
+                <span>Post-Study Work: 1-3 years</span>
+              </div>
+              <a
+                href="destination-details.html"
+                class="inline-block bg-primary hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300"
+                >Details</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 p-8 rounded-lg">
+          <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">
+            Need Help Choosing a Destination?
+          </h2>
+          <p class="text-gray-600 text-center mb-6 max-w-2xl mx-auto">
+            Take our quick assessment to find the best country based on your
+            academic background, career goals, and preferences.
+          </p>
+          <div class="text-center">
+            <a
+              href="assessment.html"
+              class="inline-block bg-secondary hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300"
+              >Start Assessment</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+      <div class="container mx-auto px-4">
+        <div class="footer-layout gap-8 mb-8">
+          <div class="footer-intro">
+            <h3 class="text-xl font-bold mb-4 text-primary">
+              Veltara Consultants
+            </h3>
+            <p class="text-gray-400">
+              Your trusted partner in achieving international education goals
+              with personalized guidance and expert support.
+            </p>
+            <div class="flex mt-4 space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-quick-links">
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="pages/index.html"
+                  class="text-gray-400 hover:text-white"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="text-gray-400 hover:text-white"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="services.html" class="text-gray-400 hover:text-white"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="destinations.html"
+                  class="text-gray-400 hover:text-white"
+                  >Study Destinations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="testimonials.html"
+                  class="text-gray-400 hover:text-white"
+                  >Success Stories</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-gray-400 hover:text-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-destinations">
+            <h4 class="text-lg font-semibold mb-4">Destinations</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in UK</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in USA</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in Canada</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in New Zealand</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in Australia</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in Denmark</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
+                <span>Central Plaza, Itahari-06, Sunsari</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone-alt mr-3 text-primary"></i>
+                <span>9852039698</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope mr-3 text-primary"></i>
+                <span>veltaraconsultants@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm">
+            © 2025 Veltara Consultants. All rights reserved.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a
+              href="privacy.html"
+              class="text-gray-400 hover:text-white text-sm"
+              >Privacy Policy</a
+            >
+            <a href="terms.html" class="text-gray-400 hover:text-white text-sm"
+              >Terms of Service</a
+            >
+            <a href="faq.html" class="text-gray-400 hover:text-white text-sm"
+              >FAQs</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
+        });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

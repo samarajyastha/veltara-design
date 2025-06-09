@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veltara Consultants - Guiding your future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#36705f",
+              secondary: "#286291",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @layer utilities {
+        .footer-layout {
+          display: grid;
+          grid-template-areas:
+            "footer-intro"
+            "footer-quick-links"
+            "footer-destinations"
+            "footer-contact";
+        }
+
+        .footer-intro {
+          grid-area: footer-intro;
+        }
+
+        .footer-quick-links {
+          grid-area: footer-quick-links;
+        }
+
+        .footer-destinations {
+          grid-area: footer-destinations;
+        }
+
+        .footer-contact {
+          grid-area: footer-contact;
+        }
+
+        @media screen and (min-width: 768px) {
+          .footer-layout {
+            grid-template-areas:
+              "footer-intro footer-contact"
+              "footer-quick-links footer-destinations";
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+
+        @media screen and (min-width: 1120px) {
+          .footer-layout {
+            grid-template-areas: "footer-intro footer-quick-links footer-destinations footer-contact";
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+          }
+        }
+      }
+
+      .program-badge {
+        transition: all 0.2s ease;
+      }
+
+      .program-badge:hover {
+        background-color: #36705f;
+        color: white;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <header>
+      <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div
+          class="container mx-auto px-4 py-4 flex justify-between items-center"
+        >
+          <a
+            href="index.html"
+            class="text-2xl font-bold text-primary flex items-center space-x-2"
+          >
+            <img src="/images/logo.png" alt="" class="h-10 w-auto" />
+            <span class="text-secondary pr-1">Veltara</span> Consultants
+          </a>
+          <div class="hidden lg:flex space-x-4 xl:space-x-8">
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >About Us</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Services</a
+            >
+            <a
+              href="destinations.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Study Destinations</a
+            >
+            <a
+              href="testimonials.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Success Stories</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Contact</a
+            >
+          </div>
+          <button class="lg:hidden text-gray-700" id="mobile-menu-button">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div
+          class="lg:hidden hidden bg-white w-full py-2 px-4 shadow-lg"
+          id="mobile-menu"
+        >
+          <a
+            href="pages/index.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >About Us</a
+          >
+          <a
+            href="services.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Services</a
+          >
+          <a
+            href="destinations.html"
+            class="block py-2 text-gray-700 text-secondary hover:text-primary"
+            >Study Destinations</a
+          >
+          <a
+            href="testimonials.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Success Stories</a
+          >
+          <a
+            href="contact.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Contact</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">
+            Explore Study Destinations
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover the perfect country for your international education
+            journey.
+          </p>
+        </div>
+
+        <!-- Country Filter -->
+        <div class="flex flex-wrap justify-center gap-2 mb-12">
+          <button
+            class="px-4 py-2 rounded-full bg-primary text-white font-medium"
+          >
+            All
+          </button>
+          <button
+            class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium transition duration-300"
+          >
+            UK
+          </button>
+          <button
+            class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium transition duration-300"
+          >
+            USA
+          </button>
+          <button
+            class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium transition duration-300"
+          >
+            Australia
+          </button>
+          <button
+            class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium transition duration-300"
+          >
+            Canada
+          </button>
+          <button
+            class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium transition duration-300"
+          >
+            Denmark
+          </button>
+          <button
+            class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium transition duration-300"
+          >
+            New Zealand
+          </button>
+        </div>
+
+        <!-- Destination Details -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+          <div class="md:flex">
+            <div
+              class="md:w-2/5 bg-gradient-to-b from-primary to-secondary p-8 text-white"
+            >
+              <h3 class="text-2xl font-bold mb-4">Study in Canada</h3>
+              <div class="mb-6">
+                <h4 class="text-lg font-semibold mb-2">Why Canada?</h4>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mt-1 mr-2"></i>
+                    <span>World-class education system</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mt-1 mr-2"></i>
+                    <span>Multicultural and welcoming society</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mt-1 mr-2"></i>
+                    <span>Post-study work opportunities</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mt-1 mr-2"></i>
+                    <span>Safe and high quality of life</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mt-1 mr-2"></i>
+                    <span>Pathway to permanent residency</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="text-lg font-semibold mb-2">Quick Facts</h4>
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <div class="text-sm">Avg. Tuition</div>
+                    <div class="font-bold">$15,000 - $35,000</div>
+                  </div>
+                  <div>
+                    <div class="text-sm">Living Costs</div>
+                    <div class="font-bold">$10,000 - $15,000/yr</div>
+                  </div>
+                  <div>
+                    <div class="text-sm">Work Permit</div>
+                    <div class="font-bold">Up to 3 years</div>
+                  </div>
+                  <div>
+                    <div class="text-sm">Top Universities</div>
+                    <div class="font-bold">UofT, UBC, McGill</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="md:w-3/5 p-8">
+              <div class="mb-8">
+                <h4 class="text-xl font-bold text-primary mb-4">
+                  Application Process
+                </h4>
+                <div class="flex flex-wrap gap-4">
+                  <div class="flex-1 min-w-[200px]">
+                    <div class="flex items-center mb-2">
+                      <div
+                        class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center mr-3"
+                      >
+                        1
+                      </div>
+                      <h5 class="font-bold text-gray-800">Choose Program</h5>
+                    </div>
+                    <p class="text-gray-600 text-sm">
+                      Select your desired program and university
+                    </p>
+                  </div>
+                  <div class="flex-1 min-w-[200px]">
+                    <div class="flex items-center mb-2">
+                      <div
+                        class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center mr-3"
+                      >
+                        2
+                      </div>
+                      <h5 class="font-bold text-gray-800">Prepare Documents</h5>
+                    </div>
+                    <p class="text-gray-600 text-sm">
+                      Academic transcripts, language tests, SOP
+                    </p>
+                  </div>
+                  <div class="flex-1 min-w-[200px]">
+                    <div class="flex items-center mb-2">
+                      <div
+                        class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center mr-3"
+                      >
+                        3
+                      </div>
+                      <h5 class="font-bold text-gray-800">Apply Online</h5>
+                    </div>
+                    <p class="text-gray-600 text-sm">
+                      Submit application through university portal
+                    </p>
+                  </div>
+                  <div class="flex-1 min-w-[200px]">
+                    <div class="flex items-center mb-2">
+                      <div
+                        class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center mr-3"
+                      >
+                        4
+                      </div>
+                      <h5 class="font-bold text-gray-800">Visa Process</h5>
+                    </div>
+                    <p class="text-gray-600 text-sm">
+                      Apply for study permit after acceptance
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-8">
+                <h4 class="text-xl font-bold text-primary mb-4">
+                  Popular Programs
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="program-badge px-4 py-2 bg-gray-100 text-primary rounded-full"
+                    >Computer Science</span
+                  >
+                  <span
+                    class="program-badge px-4 py-2 bg-gray-100 text-primary rounded-full"
+                    >Business Administration</span
+                  >
+                  <span
+                    class="program-badge px-4 py-2 bg-gray-100 text-primary rounded-full"
+                    >Engineering</span
+                  >
+                  <span
+                    class="program-badge px-4 py-2 bg-gray-100 text-primary rounded-full"
+                    >Health Sciences</span
+                  >
+                  <span
+                    class="program-badge px-4 py-2 bg-gray-100 text-primary rounded-full"
+                    >Environmental Studies</span
+                  >
+                </div>
+              </div>
+
+              <div>
+                <h4 class="text-xl font-bold text-primary mb-4">
+                  Financial Information
+                </h4>
+                <div class="bg-white border border-gray-200 rounded-lg p-4">
+                  <div class="flex justify-between mb-3">
+                    <span class="text-gray-600">Tuition Fees:</span>
+                    <span class="font-semibold">$15,000 - $35,000/year</span>
+                  </div>
+                  <div class="flex justify-between mb-3">
+                    <span class="text-gray-600">Living Expenses:</span>
+                    <span class="font-semibold">$10,000 - $15,000/year</span>
+                  </div>
+                  <div class="flex justify-between mb-3">
+                    <span class="text-gray-600">Health Insurance:</span>
+                    <span class="font-semibold">$600 - $800/year</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">Part-time Work:</span>
+                    <span class="font-semibold">Up to 20 hrs/week</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 p-8 rounded-lg">
+          <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">
+            Need Help Choosing a Destination?
+          </h2>
+          <p class="text-gray-600 text-center mb-6 max-w-2xl mx-auto">
+            Take our quick assessment to find the best country based on your
+            academic background, career goals, and preferences.
+          </p>
+          <div class="text-center">
+            <a
+              href="assessment.html"
+              class="inline-block bg-secondary hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300"
+              >Start Assessment</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+      <div class="container mx-auto px-4">
+        <div class="footer-layout gap-8 mb-8">
+          <div class="footer-intro">
+            <h3 class="text-xl font-bold mb-4 text-primary">
+              Veltara Consultants
+            </h3>
+            <p class="text-gray-400">
+              Your trusted partner in achieving international education goals
+              with personalized guidance and expert support.
+            </p>
+            <div class="flex mt-4 space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-quick-links">
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="pages/index.html"
+                  class="text-gray-400 hover:text-white"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="text-gray-400 hover:text-white"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="services.html" class="text-gray-400 hover:text-white"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="destinations.html"
+                  class="text-gray-400 hover:text-white"
+                  >Study Destinations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="testimonials.html"
+                  class="text-gray-400 hover:text-white"
+                  >Success Stories</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-gray-400 hover:text-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-destinations">
+            <h4 class="text-lg font-semibold mb-4">Destinations</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in UK</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in USA</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in Canada</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in New Zealand</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in Australia</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in Denmark</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
+                <span>Central Plaza, Itahari-06, Sunsari</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone-alt mr-3 text-primary"></i>
+                <span>9852039698</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope mr-3 text-primary"></i>
+                <span>veltaraconsultants@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm">
+            © 2025 Veltara Consultants. All rights reserved.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a
+              href="privacy.html"
+              class="text-gray-400 hover:text-white text-sm"
+              >Privacy Policy</a
+            >
+            <a href="terms.html" class="text-gray-400 hover:text-white text-sm"
+              >Terms of Service</a
+            >
+            <a href="faq.html" class="text-gray-400 hover:text-white text-sm"
+              >FAQs</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
+        });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

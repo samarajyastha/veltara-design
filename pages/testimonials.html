@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veltara Consultants - Guiding your future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#36705f",
+              secondary: "#286291",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @layer utilities {
+        .footer-layout {
+          display: grid;
+          grid-template-areas:
+            "footer-intro"
+            "footer-quick-links"
+            "footer-destinations"
+            "footer-contact";
+        }
+
+        .footer-intro {
+          grid-area: footer-intro;
+        }
+
+        .footer-quick-links {
+          grid-area: footer-quick-links;
+        }
+
+        .footer-destinations {
+          grid-area: footer-destinations;
+        }
+
+        .footer-contact {
+          grid-area: footer-contact;
+        }
+
+        @media screen and (min-width: 768px) {
+          .footer-layout {
+            grid-template-areas:
+              "footer-intro footer-contact"
+              "footer-quick-links footer-destinations";
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+
+        @media screen and (min-width: 1120px) {
+          .footer-layout {
+            grid-template-areas: "footer-intro footer-quick-links footer-destinations footer-contact";
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <header>
+      <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div
+          class="container mx-auto px-4 py-4 flex justify-between items-center"
+        >
+          <a
+            href="index.html"
+            class="text-2xl font-bold text-primary flex items-center space-x-2"
+          >
+            <img src="/images/logo.png" alt="" class="h-10 w-auto" />
+            <span class="text-secondary pr-1">Veltara</span> Consultants
+          </a>
+          <div class="hidden lg:flex space-x-4 xl:space-x-8">
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >About Us</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Services</a
+            >
+            <a
+              href="destinations.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Study Destinations</a
+            >
+            <a
+              href="testimonials.html"
+              class="text-gray-700 hover:text-primary text-secondary font-medium"
+              >Success Stories</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Contact</a
+            >
+          </div>
+          <button class="lg:hidden text-gray-700" id="mobile-menu-button">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div
+          class="lg:hidden hidden bg-white w-full py-2 px-4 shadow-lg"
+          id="mobile-menu"
+        >
+          <a
+            href="pages/index.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >About Us</a
+          >
+          <a
+            href="services.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Services</a
+          >
+          <a
+            href="destinations.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Study Destinations</a
+          >
+          <a
+            href="testimonials.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Success Stories</a
+          >
+          <a
+            href="contact.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Contact</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">
+            Student Success Stories
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Hear from students who achieved their study abroad dreams with our
+            guidance.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/women/45.jpg"
+                alt="Rahul S."
+                class="w-16 h-16 rounded-full"
+              />
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-800">Aisha Sharma</h4>
+                <p class="text-secondary">MIT, Computer Science</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4 italic">
+              "GlobalEd helped me navigate the complex application process for
+              MIT. Their expertise in preparing standout applications was
+              invaluable. I received acceptance with a full scholarship!"
+            </p>
+            <div class="flex text-yellow-400 mb-4">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="text-sm text-gray-500">
+              <i class="far fa-clock mr-2"></i>Admitted: Fall 2023
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/men/45.jpg"
+                alt="Rahul S."
+                class="w-16 h-16 rounded-full"
+              />
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-800">Raj Mehta</h4>
+                <p class="text-secondary">University of Toronto, MBA</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4 italic">
+              "The team's personalized approach made all the difference. From
+              selecting the right schools to interview preparation, their
+              support was exceptional. I'm now pursuing my MBA at Rotman."
+            </p>
+            <div class="flex text-yellow-400 mb-4">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="text-sm text-gray-500">
+              <i class="far fa-clock mr-2"></i>Admitted: Winter 2023
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/women/68.jpg"
+                alt="Rahul S."
+                class="w-16 h-16 rounded-full"
+              />
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-800">Priya Kumar</h4>
+                <p class="text-secondary">King's College London, Medicine</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4 italic">
+              "As a medical aspirant, the application process seemed
+              overwhelming. GlobalEd guided me through every step, helping me
+              secure a place at one of the UK's top medical schools."
+            </p>
+            <div class="flex text-yellow-400 mb-4">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="text-sm text-gray-500">
+              <i class="far fa-clock mr-2"></i>Admitted: Fall 2022
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/men/30.jpg"
+                alt="Rahul S."
+                class="w-16 h-16 rounded-full"
+              />
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-800">Sanjay Kumar</h4>
+                <p class="text-secondary">
+                  Stanford University, MS Computer Science
+                </p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4 italic">
+              "GlobalEd's mentorship helped me transform my profile into
+              something Stanford couldn't ignore. Their guidance on research
+              papers and SOP was game-changing for my application."
+            </p>
+            <div class="flex text-yellow-400 mb-4">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="text-sm text-gray-500">
+              <i class="far fa-clock mr-2"></i>Admitted: Fall 2023
+            </div>
+          </div>
+
+          <!-- Testimonial 5 -->
+          <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/women/63.jpg"
+                alt="Rahul S."
+                class="w-16 h-16 rounded-full"
+              />
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-800">Neha Patel</h4>
+                <p class="text-secondary">University of Sydney, MBA</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4 italic">
+              "Moving to Australia for my MBA was a big decision. GlobalEd made
+              the entire process seamless - from university selection to visa
+              processing. I'm loving my Sydney experience!"
+            </p>
+            <div class="flex text-yellow-400 mb-4">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="text-sm text-gray-500">
+              <i class="far fa-clock mr-2"></i>Admitted: Spring 2023
+            </div>
+          </div>
+
+          <!-- Testimonial 6 -->
+          <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/men/20.jpg"
+                alt="Rahul S."
+                class="w-16 h-16 rounded-full"
+              />
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-800">Amit Mehta</h4>
+                <p class="text-secondary">ETH Zurich, Robotics Engineering</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4 italic">
+              "GlobalEd helped me secure admission to my dream robotics program
+              in Switzerland. Their expertise in European applications and
+              scholarship guidance was outstanding."
+            </p>
+            <div class="flex text-yellow-400 mb-4">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="text-sm text-gray-500">
+              <i class="far fa-clock mr-2"></i>Admitted: Fall 2022
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div class="bg-white p-6 rounded-xl shadow-lg">
+            <div class="text-4xl font-bold text-primary">2500+</div>
+            <div class="text-gray-600">Students Guided</div>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-lg">
+            <div class="text-4xl font-bold text-secondary">98%</div>
+            <div class="text-gray-600">Acceptance Rate</div>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-lg">
+            <div class="text-4xl font-bold text-primary">50+</div>
+            <div class="text-gray-600">Countries Covered</div>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-lg">
+            <div class="text-4xl font-bold text-secondary">$15M+</div>
+            <div class="text-gray-600">Scholarships Secured</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+      <div class="container mx-auto px-4">
+        <div class="footer-layout gap-8 mb-8">
+          <div class="footer-intro">
+            <h3 class="text-xl font-bold mb-4 text-primary">
+              Veltara Consultants
+            </h3>
+            <p class="text-gray-400">
+              Your trusted partner in achieving international education goals
+              with personalized guidance and expert support.
+            </p>
+            <div class="flex mt-4 space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-quick-links">
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="pages/index.html"
+                  class="text-gray-400 hover:text-white"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="text-gray-400 hover:text-white"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="services.html" class="text-gray-400 hover:text-white"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="destinations.html"
+                  class="text-gray-400 hover:text-white"
+                  >Study Destinations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="testimonials.html"
+                  class="text-gray-400 hover:text-white"
+                  >Success Stories</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-gray-400 hover:text-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-destinations">
+            <h4 class="text-lg font-semibold mb-4">Destinations</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in UK</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in USA</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in Canada</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in New Zealand</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in Australia</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Study in Denmark</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
+                <span>Central Plaza, Itahari-06, Sunsari</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone-alt mr-3 text-primary"></i>
+                <span>9852039698</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope mr-3 text-primary"></i>
+                <span>veltaraconsultants@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm">
+            © 2025 Veltara Consultants. All rights reserved.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a
+              href="privacy.html"
+              class="text-gray-400 hover:text-white text-sm"
+              >Privacy Policy</a
+            >
+            <a href="terms.html" class="text-gray-400 hover:text-white text-sm"
+              >Terms of Service</a
+            >
+            <a href="faq.html" class="text-gray-400 hover:text-white text-sm"
+              >FAQs</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
+        });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
