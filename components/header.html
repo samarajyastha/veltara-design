@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veltara Consultants - Guiding your future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primaryDark: "#1d3c33",
+              primary: "#36705f",
+              secondary: "#286291",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @layer utilities {
+        .footer-layout {
+          display: grid;
+          grid-template-areas:
+            "footer-intro"
+            "footer-quick-links"
+            "footer-destinations"
+            "footer-contact";
+        }
+
+        .footer-intro {
+          grid-area: footer-intro;
+        }
+
+        .footer-quick-links {
+          grid-area: footer-quick-links;
+        }
+
+        .footer-destinations {
+          grid-area: footer-destinations;
+        }
+
+        .footer-contact {
+          grid-area: footer-contact;
+        }
+
+        @media screen and (min-width: 768px) {
+          .footer-layout {
+            grid-template-areas:
+              "footer-intro footer-contact"
+              "footer-quick-links footer-destinations";
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+
+        @media screen and (min-width: 1120px) {
+          .footer-layout {
+            grid-template-areas: "footer-intro footer-quick-links footer-destinations footer-contact";
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-gray-50">
+    <header>
+      <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div
+          class="xl:container mx-auto px-4 py-4 flex justify-between items-center"
+        >
+          <a
+            href="index.html"
+            class="text-2xl font-bold text-primary flex items-center space-x-2"
+          >
+            <img src="/images/logo.png" alt="" class="h-10 w-auto" />
+            <span class="text-secondary pr-1">Veltara</span> Consultants
+          </a>
+          <div class="hidden lg:flex space-x-4 2xl:space-x-8">
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-primary font-medium"
+            >
+              <i class="fas fa-home"></i>
+              Home</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-700 hover:text-primary font-medium"
+            >
+              <i class="fas fa-users"></i>
+              About Us</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-700 hover:text-primary font-medium"
+            >
+              <i class="fas fa-cog"></i>
+              Services</a
+            >
+            <a
+              href="destinations.html"
+              class="text-gray-700 hover:text-primary font-medium"
+            >
+              <i class="fas fa-globe-americas"></i>
+              Study Destinations
+            </a>
+            <a
+              href="testimonials.html"
+              class="text-gray-700 hover:text-primary font-medium hidden xl:block"
+            >
+              <i class="fas fa-comments"></i>
+              Success Stories
+            </a>
+            <a
+              href="contact.html"
+              class="text-gray-700 hover:text-primary font-medium"
+            >
+              <i class="fas fa-headset"></i>
+              Contact</a
+            >
+          </div>
+          <!-- Whatsapp button -->
+          <div class="flex items-center gap-3">
+            <button
+              type="button"
+              class="text-white bg-primaryDark hover:bg-primaryDark/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center flex items-center gap-2"
+            >
+              <img src="/images/whatsapp-logo.svg" alt="" class="w-5 h-5" />
+              <span class="border-l-1 pl-2">WhatsApp Us</span>
+            </button>
+            <button class="lg:hidden text-gray-700" id="mobile-menu-button">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div
+          class="lg:hidden hidden bg-white w-full py-2 px-4 shadow-lg"
+          id="mobile-menu"
+        >
+          <a
+            href="pages/index.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >About Us</a
+          >
+          <a
+            href="services.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Services</a
+          >
+          <a
+            href="destinations.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Study Destinations</a
+          >
+          <a
+            href="testimonials.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Success Stories</a
+          >
+          <a
+            href="contact.html"
+            class="block py-2 text-gray-700 hover:text-primary"
+            >Contact</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
+        });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
